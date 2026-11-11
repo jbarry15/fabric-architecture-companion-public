@@ -62,7 +62,7 @@ Consider other options when you need:
 - ✅ **Right-size capacity** — Fabric Apps consume capacity units from the assigned capacity; monitor and plan capacity like any other workload.
 
 ### Lifecycle
-- ✅ **Develop locally, then promote** — run the full stack locally with Docker via the Rayfin CLI, then `rayfin up` to Fabric.
+- ✅ **Know where development runs** — the standard `npx rayfin dev` workflow runs the frontend locally with a backend in Fabric and can create cloud resources. The upstream Rayfin repository labels its fully local development option experimental.
 - ✅ **Manage the tenant prerequisite** — a tenant admin must enable the Fabric Apps workload, and the workspace must have Fabric capacity assigned.
 - ✅ **Integrate with source control and pipelines** — keep the project in Git and align deployments with your [CI/CD practices](ci-cd-deployment.md).
 
@@ -74,12 +74,18 @@ Consider other options when you need:
 - 🚫 **Using Fabric Apps for heavy transactional systems** — workloads needing complex multi-step transactions or stored procedures belong in a purpose-built database tier.
 - 🚫 **Over-granting `Edit`/`Reshare`** — keep deploy and resharing rights with a small set of owners.
 
+## Related solutions
+
+- [Microsoft Rayfin](../solutions/fabric-apps/repos/microsoft-rayfin.md) - public SDK, CLI, and template entry points
+- [Rayfin Onboarding 2026](../solutions/fabric-apps/repos/rayfin-onboarding-2026.md) - a public work-order app lab with preview and setup caveats
+
 ## References
 
 - [What is Fabric Apps? (overview)](https://learn.microsoft.com/en-us/fabric/apps/overview)
 - [Rayfin GitHub repository](https://github.com/microsoft/rayfin)
 - [Rayfin SDK overview](https://learn.microsoft.com/en-us/javascript/api/fabric-apps-sdk-javascript/rayfin-overview)
 - [Rayfin CLI reference](https://learn.microsoft.com/en-us/fabric/apps/cli-reference)
+- [Create and deploy a Fabric app with the CLI](https://learn.microsoft.com/en-us/fabric/apps/create-app-with-cli)
 - [Fabric Apps region availability](https://learn.microsoft.com/en-us/fabric/admin/region-availability)
 - [Workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces)
 - [SQL database in Fabric overview](https://learn.microsoft.com/en-us/fabric/database/sql/overview)

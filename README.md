@@ -105,8 +105,8 @@ Draft area for Fabric quota management, CU sizing, capacity operations, regional
 ### 📊 Reference Architectures
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.
 
-### Solutions (6 scenarios)
-[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 13 workload and cross-cutting categories. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
+### Solutions (8 entries)
+[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 12 workload and cross-cutting categories. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
 
 ### 🤖 Copilot Agents
 - **Fabric Architecture Reviewer** — Full design review against best practices
@@ -178,14 +178,13 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   │   ├── data-agent-readiness-evaluation.md
 │   │   └── supply-chain-demo.md
 │   ├── fabric-apps/
-│   │   └── README.md
+│   │   ├── README.md
+│   │   └── repos/
+│   │       ├── microsoft-rayfin.md
+│   │       └── rayfin-onboarding-2026.md
 │   ├── fabric-ci-cd/
 │   │   ├── dev-test-prod-deployment.md
 │   │   └── private-network-deployment.md
-│   ├── fabric-compete-scenario/
-│   │   ├── README.md
-│   │   └── presentations/
-│   │       └── README.md
 │   ├── fabric-databases/
 │   │   └── README.md
 │   ├── fabric-other/

@@ -15,7 +15,6 @@ These are reference cards, not customer case studies, production certifications,
 | [Fabric AI, IQ, and Ontology](fabric-ai-iq-ontology/) | Data agents, business context, ontology, and AI grounding |
 | [Fabric Apps](fabric-apps/) | Application experiences and application integration |
 | [Fabric CI/CD](fabric-ci-cd/) | Cross-workload development, deployment, and environment promotion |
-| [Fabric Comparison and Migration Scenarios](fabric-compete-scenario/) | Public architecture comparisons, migration scenarios, and presentation references |
 | [Fabric Databases](fabric-databases/) | Operational databases, migrations, and database-to-analytics integration |
 | [Other Fabric Solutions](fabric-other/) | Cross-workload scenarios without a more specific category |
 | [Fabric and Purview Integration](fabric-purview-integration/) | Cataloging, discovery, and governance integration |
@@ -24,7 +23,7 @@ These are reference cards, not customer case studies, production certifications,
 
 Place each solution under its primary workload or cross-cutting category. List related workloads in the card rather than duplicating it. These are navigation categories, not an official product-workload taxonomy.
 
-The catalog contains six solution cards. New categories have starter READMEs with related guidance, not additional implemented solutions. The `presentations/` and `repos/` subfolders provide places to index public references while keeping assets upstream.
+The catalog contains eight entries: six scenario cards and two Fabric Apps repository references. Categories without cataloged entries have starter READMEs with related guidance, not additional implemented solutions. The `presentations/` and `repos/` subfolders index public references while keeping assets upstream.
 
 ## Solution catalog
 
@@ -36,6 +35,13 @@ The catalog contains six solution cards. New categories have starter READMEs wit
 | [Dev, Test, and Prod deployment](fabric-ci-cd/dev-test-prod-deployment.md) | Fabric CI/CD | Reference implementation | Community example; verify item support, environment bindings, and release gates |
 | [Power BI connectivity decisions](power-bi/connectivity-decisions.md) | Power BI | Guide | Choose the storage mode against actual security, freshness, and capacity constraints |
 | [IQ supply-chain demo](fabric-ai-iq-ontology/supply-chain-demo.md) | Fabric AI, IQ, and Ontology | Demo | Synthetic-data accelerator with preview dependencies; intended for evaluation |
+
+## Fabric Apps repository references
+
+| Reference | Type | Important boundary |
+|-----------|------|--------------------|
+| [Microsoft Rayfin](fabric-apps/repos/microsoft-rayfin.md) | Guide | Fabric Apps is preview; local frontend development can deploy a Fabric backend |
+| [Rayfin Onboarding 2026](fabric-apps/repos/rayfin-onboarding-2026.md) | Workshop | Adapt event-specific setup; validate separate data-agent prerequisites |
 
 ## How to use a solution
 
