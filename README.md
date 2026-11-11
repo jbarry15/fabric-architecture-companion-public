@@ -105,6 +105,9 @@ Draft area for Fabric quota management, CU sizing, capacity operations, regional
 ### 📊 Reference Architectures
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.
 
+### Solutions (6 scenarios)
+[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), grouped by Fabric workload and cross-cutting category. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories.
+
 ### 🤖 Copilot Agents
 - **Fabric Architecture Reviewer** — Full design review against best practices
 - **Anti-Pattern Detector** — Quick scan for common Fabric mistakes
@@ -157,6 +160,18 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   ├── end-to-end-medallion.md
 │   ├── onelake-decision-framework.md
 │   └── fabric-data-store-decision-guide.md
+├── solutions/               # Public-source scenarios, grouped by workload
+│   ├── README.md
+│   ├── data-warehouse/
+│   │   └── capacity-investigation.md
+│   ├── power-bi/
+│   │   └── connectivity-decisions.md
+│   ├── fabric-iq/
+│   │   ├── data-agent-readiness-evaluation.md
+│   │   └── supply-chain-demo.md
+│   └── ci-cd/
+│       ├── private-network-deployment.md
+│       └── dev-test-prod-deployment.md
 ├── fabric-skills/          # Fabric skills and agent enablement resources
 │   └── README.md
 ├── fabric-mcps/            # MCP servers and agent-facing tool resources

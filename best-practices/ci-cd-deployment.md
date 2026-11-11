@@ -263,6 +263,11 @@ Recent lifecycle updates add more control for complex Fabric release processes:
 
 These capabilities strengthen the repo's guidance to treat Fabric artifacts as code, but they do not remove the need for PR review, deployment validation, rollback planning, and environment-specific configuration.
 
+## Related solutions
+
+- [Dev, Test, and Prod deployment](../solutions/ci-cd/dev-test-prod-deployment.md) - a public community reference for GitHub Actions and `fabric-cicd`
+- [Private-network deployment](../solutions/ci-cd/private-network-deployment.md) - a scoped notebook example using a self-hosted agent and workspace-level Private Link
+
 ## References
 
 ### Core documentation

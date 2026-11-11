@@ -43,6 +43,11 @@ Recent Fabric announcements reinforce the same architecture: data agents should 
 3. Reuse it through supported consumption surfaces such as Copilot Studio, MCP clients, Microsoft Foundry, or custom clients.
 4. Monitor usage, answer quality, and data-source selection before broad rollout.
 
+## Related solutions
+
+- [Data-agent readiness and evaluation](../solutions/fabric-iq/data-agent-readiness-evaluation.md) - a public Microsoft workshop for measurable answer-quality improvements
+- [IQ supply-chain demo](../solutions/fabric-iq/supply-chain-demo.md) - a synthetic-data accelerator with explicit preview dependencies
+
 ## References
 
 - [Data architecture plan for AI agents (CAF)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai-agents/data-architecture-plan)

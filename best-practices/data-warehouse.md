@@ -78,6 +78,10 @@ SSMS Agent Mode, SQL Projects, Schema Compare, SQL Formatter, and Fabric Warehou
 - 🚫 **Editing production directly with no Git** — unversioned warehouses can't be reviewed or rolled back; use source control and deployment pipelines.
 - 🚫 **Treating Warehouse schema as portal-only state** — SQL objects should be represented in source-controlled project/schema artifacts when the team needs code review, schema compare, and repeatable deployment.
 
+## Related solutions
+
+- [Warehouse capacity investigation](../solutions/data-warehouse/capacity-investigation.md) - correlate Capacity Metrics with Query Insights before tuning or resizing
+
 ## References
 
 - [Data Warehouse in Fabric documentation](https://learn.microsoft.com/en-us/fabric/data-warehouse/)

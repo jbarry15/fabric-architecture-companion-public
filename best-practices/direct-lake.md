@@ -141,6 +141,10 @@ Direct Lake performance depends heavily on Delta table health. These practices a
 | Import | Stale (refresh cycle) | ⭐⭐⭐ | High (memory + CPU) | Yes |
 | DirectQuery | Real-time | ⭐ | Source-dependent | No |
 
+## Related solutions
+
+- [Power BI connectivity decisions](../solutions/power-bi/connectivity-decisions.md) - apply storage-mode guidance to a concrete architecture decision
+
 ## Related anti-patterns
 
 - [DirectQuery to external systems](../anti-patterns/directquery-to-external.md)
