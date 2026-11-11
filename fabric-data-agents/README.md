@@ -45,8 +45,8 @@ Recent Fabric announcements reinforce the same architecture: data agents should 
 
 ## Related solutions
 
-- [Data-agent readiness and evaluation](../solutions/fabric-iq/data-agent-readiness-evaluation.md) - a public Microsoft workshop for measurable answer-quality improvements
-- [IQ supply-chain demo](../solutions/fabric-iq/supply-chain-demo.md) - a synthetic-data accelerator with explicit preview dependencies
+- [Data-agent readiness and evaluation](../solutions/fabric-ai-iq-ontology/data-agent-readiness-evaluation.md) - a public Microsoft workshop for measurable answer-quality improvements
+- [IQ supply-chain demo](../solutions/fabric-ai-iq-ontology/supply-chain-demo.md) - a synthetic-data accelerator with explicit preview dependencies
 
 ## References
 

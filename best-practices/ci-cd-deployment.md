@@ -265,8 +265,8 @@ These capabilities strengthen the repo's guidance to treat Fabric artifacts as c
 
 ## Related solutions
 
-- [Dev, Test, and Prod deployment](../solutions/ci-cd/dev-test-prod-deployment.md) - a public community reference for GitHub Actions and `fabric-cicd`
-- [Private-network deployment](../solutions/ci-cd/private-network-deployment.md) - a scoped notebook example using a self-hosted agent and workspace-level Private Link
+- [Dev, Test, and Prod deployment](../solutions/fabric-ci-cd/dev-test-prod-deployment.md) - a public community reference for GitHub Actions and `fabric-cicd`
+- [Private-network deployment](../solutions/fabric-ci-cd/private-network-deployment.md) - a scoped notebook example using a self-hosted agent and workspace-level Private Link
 
 ## References
 

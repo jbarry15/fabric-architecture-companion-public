@@ -106,7 +106,7 @@ Draft area for Fabric quota management, CU sizing, capacity operations, regional
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.
 
 ### Solutions (6 scenarios)
-[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), grouped by Fabric workload and cross-cutting category. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories.
+[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 13 workload and cross-cutting categories. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
 
 ### 🤖 Copilot Agents
 - **Fabric Architecture Reviewer** — Full design review against best practices
@@ -162,16 +162,42 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   └── fabric-data-store-decision-guide.md
 ├── solutions/               # Public-source scenarios, grouped by workload
 │   ├── README.md
+│   ├── data-engineering-data-science/
+│   │   └── README.md
+│   ├── data-integration/
+│   │   ├── README.md
+│   │   └── presentations/
+│   │       └── README.md
 │   ├── data-warehouse/
-│   │   └── capacity-investigation.md
-│   ├── power-bi/
-│   │   └── connectivity-decisions.md
-│   ├── fabric-iq/
+│   │   ├── capacity-investigation.md
+│   │   └── repos/
+│   │       └── README.md
+│   ├── fabric-admin-governance-security/
+│   │   └── README.md
+│   ├── fabric-ai-iq-ontology/
 │   │   ├── data-agent-readiness-evaluation.md
 │   │   └── supply-chain-demo.md
-│   └── ci-cd/
-│       ├── private-network-deployment.md
-│       └── dev-test-prod-deployment.md
+│   ├── fabric-apps/
+│   │   └── README.md
+│   ├── fabric-ci-cd/
+│   │   ├── dev-test-prod-deployment.md
+│   │   └── private-network-deployment.md
+│   ├── fabric-compete-scenario/
+│   │   ├── README.md
+│   │   └── presentations/
+│   │       └── README.md
+│   ├── fabric-databases/
+│   │   └── README.md
+│   ├── fabric-other/
+│   │   ├── README.md
+│   │   └── repos/
+│   │       └── README.md
+│   ├── fabric-purview-integration/
+│   │   └── README.md
+│   ├── power-bi/
+│   │   └── connectivity-decisions.md
+│   └── real-time-intelligence-iq/
+│       └── README.md
 ├── fabric-skills/          # Fabric skills and agent enablement resources
 │   └── README.md
 ├── fabric-mcps/            # MCP servers and agent-facing tool resources
