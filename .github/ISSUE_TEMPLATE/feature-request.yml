@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest new guidance, templates, scenarios, or tooling.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement. Keep requests customer-safe and avoid confidential customer, tenant, account, or Microsoft-internal details.
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should be added or improved?
+      placeholder: Describe the requested guidance, pattern, template, notebook, or tool.
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What public/customer-safe scenario does this support?
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Public references
+      description: Add public Microsoft Learn links or other public references that support the request.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Best practices
+        - Anti-patterns
+        - Reference architectures
+        - Fabric data agents
+        - Fabric MCPs
+        - Toolbox/notebooks
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-safety checklist
+      options:
+        - label: I have not included confidential customer, tenant, account, or Microsoft-internal information.
+          required: true
+        - label: I have not included secrets, credentials, tokens, or private endpoints.
+          required: true

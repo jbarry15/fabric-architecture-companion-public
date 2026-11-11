@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Microsoft Fabric documentation
+    url: https://learn.microsoft.com/en-us/fabric/
+    about: Use Microsoft Learn for product documentation and current product behavior.
+  - name: Microsoft Fabric Community
+    url: https://community.fabric.microsoft.com/
+    about: Ask product usage and troubleshooting questions in the Fabric community.
+  - name: Microsoft Security Response Center
+    url: https://msrc.microsoft.com/report
+    about: Report security vulnerabilities privately. Do not open public security issues.

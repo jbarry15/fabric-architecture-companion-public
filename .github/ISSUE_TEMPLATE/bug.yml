@@ -1,0 +1,49 @@
+name: Bug report
+description: Report incorrect, outdated, or broken repository content.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve this repository. Do not include confidential customer data, secrets, tenant IDs, workspace IDs, internal Microsoft links, or screenshots with identifying information.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is incorrect, outdated, broken, or confusing?
+      placeholder: Describe the issue.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Repository location
+      description: Link to the file, section, or page.
+      placeholder: "best-practices/direct-lake.md"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected guidance or behavior
+      description: What should the content say or do instead?
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: Public references
+      description: Add public Microsoft Learn links or other public references that support the change.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-safety checklist
+      options:
+        - label: I have not included confidential customer, tenant, account, or Microsoft-internal information.
+          required: true
+        - label: I have not included secrets, credentials, tokens, or private endpoints.
+          required: true

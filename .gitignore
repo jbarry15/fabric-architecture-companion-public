@@ -1,0 +1,18 @@
+# fabric-architecture-companion
+
+## Dependencies
+node_modules/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## IDE
+.vscode/*
+!.vscode/mcp.json
+.idea/
+
+## Temp
+*.tmp
+*.log
+__pycache__/
