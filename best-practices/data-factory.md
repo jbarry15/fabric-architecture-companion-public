@@ -14,14 +14,14 @@ It offers several tools, each tuned to a different job:
 | **[Copy job](https://learn.microsoft.com/en-us/fabric/data-factory/what-is-copy-job)** | Simplified ingestion — full/incremental copy, replication, [CDC](https://learn.microsoft.com/en-us/fabric/data-factory/cdc-copy-job) | Wizard | No/low |
 | **[Copy activity](https://learn.microsoft.com/en-us/fabric/data-factory/copy-data-activity)** (in pipelines) | Ingestion inside an orchestrated, parameterized, metadata-driven flow | Canvas | No/low |
 | **[Dataflow Gen2](https://learn.microsoft.com/en-us/fabric/data-factory/create-first-dataflow-gen2)** | Transformation / data prep — 300+ Power Query functions | Power Query | No/low |
-| **[Mirroring](mirroring.md)** | Free, continuous replication of operational stores, open tables, and selected metadata into OneLake | Config | No code |
-| **[dbt job](https://learn.microsoft.com/en-us/fabric/data-factory/dbt-job-overview)** (preview) | dbt Core transformations orchestrated in Fabric | Config + dbt project | Code |
+| **[Mirroring](mirroring.md)** | Continuous replication of supported operational sources or metadata into OneLake; optional extended capabilities incur charges | Config | No code |
+| **[dbt job](https://learn.microsoft.com/en-us/fabric/data-factory/dbt-job-overview)** | dbt Core transformations orchestrated in Fabric | Config + dbt project | Code |
 | **[Apache Airflow jobs](https://learn.microsoft.com/en-us/fabric/data-factory/apache-airflow-jobs-concepts)** | Code-first orchestration (Python DAGs) for teams standardized on Airflow | DAG code | Code |
 
 ```mermaid
 flowchart LR
     SRC[170+ sources\nDB / SaaS / files / on-prem] -->|Copy job / Copy activity| BRZ[(Bronze\nLakehouse)]
-    SRC -.->|Mirroring free| OL[(OneLake)]
+    SRC -.->|Mirroring| OL[(OneLake)]
     BRZ -->|Dataflow Gen2 / pipelines| SLV[(Silver)]
     SLV --> GLD[(Gold\nstar schema)]
     PIPE[Pipeline orchestration] -.schedules/triggers.-> BRZ
@@ -44,7 +44,7 @@ Match the tool to the job rather than forcing everything through pipelines. See 
 | Orchestrate + schedule multi-step flows, parameterized/metadata-driven | **Pipelines** |
 | Trigger business-app actions from a data workflow | **Business Actions activity** in a pipeline |
 | Keep point-in-time Dataflow Gen2 query snapshots | **Back up query data to Lakehouse** |
-| Continuously replicate an operational database into OneLake, free | **[Mirroring](mirroring.md)** |
+| Continuously replicate a supported operational database into OneLake | **[Mirroring](mirroring.md)** |
 | Heavy/complex big-data transformation | **[Spark notebooks](data-engineering.md)** |
 | Real-time / event-driven ingestion | **[Real-Time hub](real-time-hub.md)** to discover/source streams, then **[Eventstreams (RTI)](real-time-intelligence.md)** to process and route |
 | dbt-standardized SQL transformations | **dbt job** |
@@ -56,7 +56,7 @@ Official [data movement guidance](https://learn.microsoft.com/en-us/fabric/data-
 
 | Scenario | Recommended | Why |
 |----------|-------------|-----|
-| **Already-curated Gold data** (ETL done elsewhere) | **[Mirroring](mirroring.md)** | Free, minimal setup, continuous replication into OneLake |
+| **Already-curated Gold data** (ETL done elsewhere) | **[Mirroring](mirroring.md)** | Minimal setup and continuous replication into OneLake for supported sources |
 | **Bronze raw ingestion** | **Copy job** | Native incremental load, schema mapping, scheduling — no pipeline complexity |
 | **Real-time streaming** | **[Eventstreams](real-time-intelligence.md)** | Low-latency, no-code routing to multiple destinations |
 | **Complex orchestration** | **Pipelines + Copy activity** | Parameterization and metadata-driven ingestion |
@@ -66,7 +66,7 @@ Official [data movement guidance](https://learn.microsoft.com/en-us/fabric/data-
 ### Placement & architecture
 - ✅ **Land data in OneLake** — target a Lakehouse or Warehouse so ingested data is immediately governed, in Delta, and available to Spark, Warehouse, and [Direct Lake](direct-lake.md). Don't stage in external storage first.
 - ✅ **Ingest into Bronze, transform toward Gold** — use Data Factory to land raw data, then conform/curate through the [Medallion](medallion-architecture.md) layers rather than doing all transformation inline at ingest.
-- ✅ **Prefer Mirroring for already-curated / operational sources** — it's free and continuous; skip hand-built copy pipelines when [Mirroring](mirroring.md) or an auto-replicating [Fabric database](databases-in-fabric.md) already lands the data in OneLake.
+- ✅ **Prefer Mirroring for already-curated / operational sources** — skip hand-built copy pipelines when [Mirroring](mirroring.md) or an auto-replicating [Fabric database](databases-in-fabric.md) already lands the data in OneLake. Core mirroring compute is free, but [extended capabilities](https://learn.microsoft.com/en-us/fabric/mirroring/extended-capabilities-billing), source-side usage, storage beyond included limits, and downstream processing can incur costs.
 - ✅ **Plan connectivity before tool selection** — source location and network controls determine whether you need direct connectors, mirroring, gateways, VNet gateways, managed private endpoints, or trusted workspace access. See [data gateway and connectivity guidance](data-gateways.md).
 
 ### Movement & transformation

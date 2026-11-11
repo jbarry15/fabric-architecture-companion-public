@@ -25,7 +25,7 @@ Fabric Data Engineering enables users to design, build, and maintain data system
 
 | Practice | Details |
 |----------|---------|
-| **Use a current supported runtime** | Runtime 2.0 is GA for production and brings Spark 4.1, Delta Lake 4.2, Python 3.13, and Native Execution Engine support; Runtime 1.3 remains the default during rollout, so opt in deliberately and republish/test Environments before production |
+| **Use a current supported runtime** | [Runtime 2.0](https://learn.microsoft.com/en-us/fabric/data-engineering/runtime-2-0) is GA and the default for new workspaces and Environment items; it includes Spark 4.1, Delta Lake 4.2, Python 3.13, and Native Execution Engine support. Validate libraries, settings, and workloads before upgrading existing environments, then publish and test changes |
 | **Use Native Execution Engine where it fits** | Enable Fabric's native/vectorized execution path for supported Spark workloads, especially JSON-heavy ingestion and transformation, but validate fallback behavior for unsupported operators |
 | **Prefer DataFrames over RDDs** | DataFrames use the Catalyst optimizer and Tungsten engine; RDDs bypass all optimizations |
 | **Enable Adaptive Query Execution (AQE)** | Dynamically optimizes shuffle partitions and handles skewed data automatically |

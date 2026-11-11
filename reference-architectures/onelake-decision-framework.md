@@ -129,7 +129,7 @@ OneLake connects distributed data into a single namespace through two complement
 | Metadata mirroring | Synchronize only catalog metadata; reference source data in place via shortcuts — no copy, no ETL |
 | [Open mirroring](https://learn.microsoft.com/en-us/fabric/mirroring/open-mirroring) | API-based approach for any app/provider to write change data into a mirrored database using open Delta Lake format |
 
-**Supported mirroring sources** (as of 2026): Azure SQL Database, Azure SQL Managed Instance, Azure Cosmos DB, Azure Database for PostgreSQL, Azure Database for MySQL (preview), Fabric SQL database, SQL Server, Snowflake, Oracle, SAP, Google BigQuery (preview), and Azure Databricks / Dremio (preview) via metadata mirroring — plus any application through Open mirroring. See the [mirroring overview](https://learn.microsoft.com/en-us/fabric/mirroring/overview) for the current list.
+**Supported mirroring sources** include Azure SQL Database, Azure SQL Managed Instance, Azure Cosmos DB, Azure Database for PostgreSQL, [Azure Database for MySQL (preview)](https://learn.microsoft.com/en-us/fabric/mirroring/azure-database-mysql), Fabric SQL database, SQL Server, Snowflake, Oracle, SAP, and [Google BigQuery](https://learn.microsoft.com/en-us/fabric/mirroring/google-bigquery). Azure Databricks and [Dremio (preview)](https://learn.microsoft.com/en-us/fabric/mirroring/catalog-mirroring/dremio) support metadata mirroring; applications can also implement Open mirroring. See [getting started with mirroring](https://learn.microsoft.com/en-us/fabric/mirroring/get-started-with-mirroring) for the current source list.
 
 ### Capability 2 — Open Data Interoperability
 

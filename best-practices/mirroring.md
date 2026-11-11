@@ -61,7 +61,7 @@ Mirroring is usually an **ingestion and unification** pattern, not the final bus
 - ✅ **Review mirrored database sharing** — sharing can grant access to the mirrored database and SQL analytics endpoint without granting workspace access.
 - ✅ **Monitor replication health** — treat replication lag, source schema changes, and failed tables as operational signals with owners and runbooks.
 - ✅ **Separate replication from transformation** — keep mirroring simple; apply business transformations downstream where they can be versioned, tested, and promoted.
-- ✅ **Track cost boundaries** — mirroring can include capacity-based free storage limits, but downstream processing, BI, and transformations still consume capacity and storage.
+- ✅ **Track cost boundaries** — core mirroring compute is free, but [extended capabilities](https://learn.microsoft.com/en-us/fabric/mirroring/extended-capabilities-billing) are billed based on usage. Check source-side charges, capacity-based free storage limits, and downstream processing, BI, and transformation costs.
 
 ## Anti-patterns
 

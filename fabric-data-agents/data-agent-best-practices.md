@@ -161,7 +161,7 @@ Once built, publish the agent where users already work. Validate the authenticat
 | Surface | Use it for | How |
 |---------|-----------|-----|
 | **Copilot Studio** | Add the published data agent as a Fabric IQ Data MCP tool inside a custom copilot or multi-agent orchestration; validate same-tenant setup and User vs Maker authentication | [Consume a data agent as a tool in Copilot Studio](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-microsoft-copilot-studio-tool) |
-| **Microsoft Foundry** | Add published data agents through Fabric IQ / OneLake Catalog for multi-agent patterns, or use the earlier single-agent Fabric connection pattern when required | [Foundry via Fabric IQ](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry-fabric-iq) · [Foundry connection pattern](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry) |
+| **Microsoft Foundry** | Add published data agents through Fabric IQ / OneLake Catalog (preview); migrate the earlier Fabric tool integration, which is unsupported as of November 6, 2026 | [Foundry via Fabric IQ](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry-fabric-iq) · [Retirement notice](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry) |
 | **MCP endpoint** | Query a published data agent from any MCP client that supports streamable HTTP and can attach a Fabric bearer token | [Data agent as MCP server](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-mcp-server) |
 | **Python SDK / external client** | Use MCP for new runtime integrations; treat the Python client SDK sample as migration/reference guidance because its Assistants API dependency is sunset | [Consume from Python](https://learn.microsoft.com/en-us/fabric/data-science/consume-data-agent-python) |
 | **Native Fabric visual responses** | Let users request generated charts directly in the Fabric data agent experience | [Visual responses](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-visuals) |
@@ -218,7 +218,7 @@ The [Fabric Data Agent Community Hub](community-resources.md) is a useful supple
 - [Fabric data agent runtime](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-runtime)
 - [Evaluate a data agent](https://learn.microsoft.com/en-us/fabric/data-science/evaluate-data-agent)
 - [Consume a data agent as a tool in Copilot Studio](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-microsoft-copilot-studio-tool)
-- [Consume a data agent in Microsoft Foundry](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry)
+- [Earlier Microsoft Foundry integration retirement notice](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry)
 - [Consume a data agent in Microsoft Foundry via Fabric IQ](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry-fabric-iq)
 - [Observability for Fabric data agents in Microsoft Foundry](https://learn.microsoft.com/en-us/fabric/data-science/fabric-data-agent-foundry-observability)
 - [Data agent as a Model Context Protocol server](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-mcp-server)

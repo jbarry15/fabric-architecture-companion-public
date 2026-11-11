@@ -87,7 +87,7 @@ Common mistakes with clear explanation of impact, severity, and what to do inste
 ### 🔒 Security (4 docs)
 Security best practices, anti-patterns, and network connectivity patterns — grounded in the [Fabric Security White Paper](https://aka.ms/fabricsecuritywhitepaper).
 
-### 🤖 Fabric Data Agents (6 docs)
+### 🤖 Fabric Data Agents (8 docs)
 How to prepare your Fabric data estate for data agents: data architecture planning, multi-source Data Agent configuration across SQL/KQL/semantic/graph/ontology/search sources, runtime and MCP consumption guidance, ontologies and **Fabric IQ** as the shared semantic layer, community resources, and agent-specific anti-patterns.
 
 ### 🧰 Fabric Skills

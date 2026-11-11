@@ -6,7 +6,7 @@ Microsoft Fabric evolves rapidly. This document explains how to maintain the con
 
 ```bash
 # 1. Pull latest changes
-git pull origin master
+git pull origin main
 
 # 2. Open in VS Code with Copilot agent mode (Ctrl+Shift+I)
 #    Ask: "Check if any best practices or anti-patterns are outdated
@@ -46,7 +46,7 @@ Copilot will use the Microsoft Learn MCP server to search live docs and compare 
 ### Option 2: Copilot CLI
 
 ```bash
-cd fabric-architecture-companion
+cd fabric-architecture-companion-public
 
 # Check a specific doc
 # "Is the Direct Lake best practice doc still accurate?"
