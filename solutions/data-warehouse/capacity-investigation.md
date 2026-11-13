@@ -22,6 +22,12 @@ Use the report linked from the Microsoft Learn walkthrough to align Capacity Met
 3. Inspect overlapping queries, duration, allocated CPU, scan volume, status, and SQL text. Use a request's distributed statement ID to investigate it in Query Insights.
 4. Change one tuning or scheduling factor, then compare equivalent workload windows.
 
+## Public repository reference
+
+The [Fabric DW Query Capacity Correlation repository](https://github.com/mariyaali/fabric-dw-query-capacity-correlation) provides another public report implementation for this scenario. Keep its assets upstream and review reuse terms before copying them.
+
+Use Microsoft Learn as the authority where the README differs: correlate by warehouse and overlapping time window, not by joining the two services' identifiers, and verify the actual overlapping telemetry history rather than assuming a shared 30-day window.
+
 ## Prerequisites and watch-outs
 
 - The walkthrough requires Power BI Desktop with PBIP support, PowerShell, Azure CLI, access to the Capacity Metrics semantic model, and Read and Query Insights access to each warehouse.

@@ -2,8 +2,6 @@
 
 [Solutions catalog](../../README.md)
 
-No repository references are cataloged here yet.
+The [Fabric DW Query Capacity Correlation reference](../capacity-investigation.md#public-repository-reference) is documented within the existing Warehouse capacity investigation card rather than duplicating that scenario here.
 
 Keep implementation code upstream. Link public repositories from solution cards in the parent folder and review their reuse terms before copying code.
-
-For the existing investigation guide, see [Warehouse capacity investigation](../capacity-investigation.md).

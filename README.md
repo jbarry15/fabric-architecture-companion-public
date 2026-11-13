@@ -105,7 +105,7 @@ Draft area for Fabric quota management, CU sizing, capacity operations, regional
 ### 📊 Reference Architectures
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.
 
-### Solutions (9 entries)
+### Solutions (16 entries)
 [Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 12 workload and cross-cutting categories. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
 
 ### 🤖 Copilot Agents
@@ -173,14 +173,19 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   │   └── repos/
 │   │       └── README.md
 │   ├── fabric-admin-governance-security/
-│   │   └── README.md
+│   │   ├── README.md
+│   │   ├── fabric-security-runbooks.md
+│   │   ├── fabric-atlas.md
+│   │   └── fabric-api.md
 │   ├── fabric-ai-iq-ontology/
 │   │   ├── data-agent-readiness-evaluation.md
+│   │   ├── fabric-iq-copilot-demo.md
 │   │   └── supply-chain-demo.md
 │   ├── fabric-apps/
 │   │   ├── README.md
 │   │   └── repos/
 │   │       ├── microsoft-rayfin.md
+│   │       ├── operations-iq.md
 │   │       └── rayfin-onboarding-2026.md
 │   ├── fabric-ci-cd/
 │   │   ├── dev-test-prod-deployment.md
@@ -195,7 +200,9 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   ├── fabric-purview-integration/
 │   │   └── README.md
 │   ├── power-bi/
-│   │   └── connectivity-decisions.md
+│   │   ├── connectivity-decisions.md
+│   │   ├── pbi-ops-agent.md
+│   │   └── tableau-to-powerbi-migration.md
 │   └── real-time-intelligence-iq/
 │       └── README.md
 ├── fabric-skills/          # Fabric skills and agent enablement resources
