@@ -2,6 +2,8 @@
 
 [Other Fabric solutions](../README.md)
 
-No repository references are cataloged here yet.
+| Reference | Type | Use for |
+|-----------|------|---------|
+| [Fabric Jumpstart](fabric-jumpstart.md) | Reference implementation | Deployable examples and guided evaluation scenarios |
 
-Keep implementation code upstream. Link public repositories from solution cards in the parent folder and review their reuse terms before copying code.
+Keep implementation code upstream. Put original public-repository reference cards in this folder, and review reuse terms before copying code.

@@ -1,6 +1,6 @@
 # Data-agent readiness and evaluation
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -39,9 +39,9 @@ Start with one governed business domain and a curated semantic model. Use the pu
 
 ## Related guidance
 
-- [Data Agent AI-ready checklist](../../fabric-data-agents/ai-ready-checklist.md)
-- [Data Agent best practices](../../fabric-data-agents/data-agent-best-practices.md)
-- [Consumption patterns](../../fabric-data-agents/consumption-patterns.md)
+- [Data Agent AI-ready checklist](../../../fabric-data-agents/ai-ready-checklist.md)
+- [Data Agent best practices](../../../fabric-data-agents/data-agent-best-practices.md)
+- [Consumption patterns](../../../fabric-data-agents/consumption-patterns.md)
 
 ## Microsoft Learn
 

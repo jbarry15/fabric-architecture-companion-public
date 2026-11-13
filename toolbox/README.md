@@ -7,7 +7,7 @@ Curated links to tools, accelerators, and scripts from the [Microsoft Fabric Too
 | Tool | Description | Link |
 |------|-------------|------|
 | **Microsoft Fabric CLI** | File-system-inspired CLI for navigating, scripting, automating, and operating Fabric workspaces, items, OneLake files, tables, jobs, and APIs | [GitHub](https://github.com/microsoft/fabric-cli) · [Docs](https://microsoft.github.io/fabric-cli/) |
-| **Fabric Jumpstart** | Deployable reference implementations and guided scenarios for hands-on Fabric demos, workshops, and proof-of-concept starts | [Site](https://jumpstart.fabric.microsoft.com/) |
+| **Fabric Jumpstart** | Deployable reference implementations and guided scenarios for hands-on Fabric demos, workshops, and proof-of-concept starts | [Site](https://jumpstart.fabric.microsoft.com/) · [Repository reference](../solutions/fabric-other/repos/fabric-jumpstart.md) |
 | **Semantic Link Labs** | Notebook-based utilities for semantic models, reports, Direct Lake migration, capacities, lakehouses, and Fabric automation | [GitHub](https://github.com/microsoft/semantic-link-labs) · [DeepWiki](https://deepwiki.com/microsoft/semantic-link-labs/1-overview) |
 
 ## Monitoring

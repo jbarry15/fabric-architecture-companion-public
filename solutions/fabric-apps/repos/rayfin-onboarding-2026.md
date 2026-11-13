@@ -40,7 +40,7 @@ Use the public lab as a learning path, with Microsoft Learn as the authority for
 
 - [Microsoft Rayfin reference](microsoft-rayfin.md)
 - [Fabric Apps best practices](../../../best-practices/fabric-apps.md)
-- [Data-agent readiness and evaluation](../../fabric-ai-iq-ontology/data-agent-readiness-evaluation.md)
+- [Data-agent readiness and evaluation](../../fabric-ai-iq-ontology/repos/data-agent-readiness-evaluation.md)
 
 ## Microsoft Learn
 

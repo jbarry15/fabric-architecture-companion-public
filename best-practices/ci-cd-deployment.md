@@ -265,8 +265,10 @@ These capabilities strengthen the repo's guidance to treat Fabric artifacts as c
 
 ## Related solutions
 
-- [Dev, Test, and Prod deployment](../solutions/fabric-ci-cd/dev-test-prod-deployment.md) - a public community reference for GitHub Actions and `fabric-cicd`
-- [Private-network deployment](../solutions/fabric-ci-cd/private-network-deployment.md) - a scoped notebook example using a self-hosted agent and workspace-level Private Link
+- [fabric-cicd Python deployment library](../solutions/fabric-ci-cd/repos/fabric-cicd.md) - the publishing library, distinct from community runbooks and release-pattern examples
+- [Terraform provider for Fabric](../solutions/fabric-admin-governance-security/repos/terraform-provider-fabric.md) - platform provisioning with an explicit upstream support boundary
+- [Dev, Test, and Prod deployment](../solutions/fabric-ci-cd/repos/dev-test-prod-deployment.md) - a public community reference for GitHub Actions and `fabric-cicd`
+- [Private-network deployment](../solutions/fabric-ci-cd/repos/private-network-deployment.md) - a scoped notebook example using a self-hosted agent and workspace-level Private Link
 
 ## References
 

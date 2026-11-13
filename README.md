@@ -105,8 +105,8 @@ Draft area for Fabric quota management, CU sizing, capacity operations, regional
 ### 📊 Reference Architectures
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.
 
-### Solutions (16 entries)
-[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 12 workload and cross-cutting categories. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
+### Solutions (20 entries)
+[Public-source workshops, demos, guides, and reference implementations](solutions/README.md), organized into 12 workload and cross-cutting categories. Repository-reference cards live in each workload's `repos/` folder; original scenario and decision guides stay at the workload root. Each card covers the scenario, recommended approach, prerequisites, and limitations; implementation assets stay in their public upstream repositories. Categories without solution cards contain starter guidance only.
 
 ### 🤖 Copilot Agents
 - **Fabric Architecture Reviewer** — Full design review against best practices
@@ -171,16 +171,20 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   ├── data-warehouse/
 │   │   ├── capacity-investigation.md
 │   │   └── repos/
-│   │       └── README.md
+│   │       ├── README.md
+│   │       └── fabric-migration.md
 │   ├── fabric-admin-governance-security/
 │   │   ├── README.md
-│   │   ├── fabric-security-runbooks.md
-│   │   ├── fabric-atlas.md
-│   │   └── fabric-api.md
+│   │   └── repos/
+│   │       ├── fabric-security-runbooks.md
+│   │       ├── fabric-atlas.md
+│   │       ├── fabric-api.md
+│   │       └── terraform-provider-fabric.md
 │   ├── fabric-ai-iq-ontology/
-│   │   ├── data-agent-readiness-evaluation.md
-│   │   ├── fabric-iq-copilot-demo.md
-│   │   └── supply-chain-demo.md
+│   │   └── repos/
+│   │       ├── data-agent-readiness-evaluation.md
+│   │       ├── fabric-iq-copilot-demo.md
+│   │       └── supply-chain-demo.md
 │   ├── fabric-apps/
 │   │   ├── README.md
 │   │   └── repos/
@@ -188,21 +192,25 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 │   │       ├── operations-iq.md
 │   │       └── rayfin-onboarding-2026.md
 │   ├── fabric-ci-cd/
-│   │   ├── dev-test-prod-deployment.md
-│   │   ├── fabriccicd-runbooks.md
-│   │   └── private-network-deployment.md
+│   │   └── repos/
+│   │       ├── dev-test-prod-deployment.md
+│   │       ├── fabric-cicd.md
+│   │       ├── fabriccicd-runbooks.md
+│   │       └── private-network-deployment.md
 │   ├── fabric-databases/
 │   │   └── README.md
 │   ├── fabric-other/
 │   │   ├── README.md
 │   │   └── repos/
-│   │       └── README.md
+│   │       ├── README.md
+│   │       └── fabric-jumpstart.md
 │   ├── fabric-purview-integration/
 │   │   └── README.md
 │   ├── power-bi/
 │   │   ├── connectivity-decisions.md
-│   │   ├── pbi-ops-agent.md
-│   │   └── tableau-to-powerbi-migration.md
+│   │   └── repos/
+│   │       ├── pbi-ops-agent.md
+│   │       └── tableau-to-powerbi-migration.md
 │   └── real-time-intelligence-iq/
 │       └── README.md
 ├── fabric-skills/          # Fabric skills and agent enablement resources
@@ -265,7 +273,7 @@ Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️
 ### Tools
 - [Fabric Toolbox (CAT)](https://github.com/microsoft/fabric-toolbox)
 - [Microsoft Fabric CLI](https://github.com/microsoft/fabric-cli) — Cross-workload terminal automation for Fabric workspaces, items, jobs, OneLake files, and APIs
-- [Fabric Jumpstart](https://jumpstart.fabric.microsoft.com/) — Deployable reference implementations and guided Fabric scenarios
+- [Fabric Jumpstart](https://jumpstart.fabric.microsoft.com/) — Deployable reference implementations and guided Fabric scenarios; [repository reference](solutions/fabric-other/repos/fabric-jumpstart.md)
 - [Semantic Link Labs](https://github.com/microsoft/semantic-link-labs) — Notebook-based semantic model, report, lakehouse, and capacity automation utilities
 - [Skills for Fabric](https://github.com/microsoft/skills-for-fabric) — Copilot/agent skill bundles for Fabric architecture, implementation, operations, migration, and Power BI authoring workflows
 

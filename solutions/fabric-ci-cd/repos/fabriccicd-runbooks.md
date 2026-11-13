@@ -1,6 +1,6 @@
 # FabricCICD runbook series
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -36,7 +36,8 @@ Use the series alongside this repository's CI/CD guidance. Keep the upstream run
 
 ## Related guidance
 
-- [CI/CD deployment best practices](../../best-practices/ci-cd-deployment.md)
+- [CI/CD deployment best practices](../../../best-practices/ci-cd-deployment.md)
+- [fabric-cicd Python deployment library](fabric-cicd.md) - the publishing tool, distinct from this community runbook series
 - [Dev, Test, and Prod deployment](dev-test-prod-deployment.md)
 - [Private-network deployment](private-network-deployment.md)
 

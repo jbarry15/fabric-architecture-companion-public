@@ -1,6 +1,6 @@
 # Dev, Test, and Prod deployment
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -40,8 +40,8 @@ Evaluate the public community reference for Git-based development and GitHub Act
 
 ## Related guidance
 
-- [CI/CD deployment best practices](../../best-practices/ci-cd-deployment.md)
-- [Deployment patterns](../../reference-architectures/deployment-patterns.md)
+- [CI/CD deployment best practices](../../../best-practices/ci-cd-deployment.md)
+- [Deployment patterns](../../../reference-architectures/deployment-patterns.md)
 - [Private-network deployment](private-network-deployment.md) - a narrower option for inbound-restricted workspaces
 
 ## Microsoft Learn

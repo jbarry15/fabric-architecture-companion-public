@@ -1,6 +1,6 @@
 # FabricSecurity runbooks
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -34,9 +34,9 @@ Apply one control at a time in a test workspace, alongside this repository's sec
 
 ## Related guidance
 
-- [Security best practices](../../security/best-practices.md)
-- [Network security patterns](../../security/network-security.md)
-- [Governance by layer](../../best-practices/governance.md)
+- [Security best practices](../../../security/best-practices.md)
+- [Network security patterns](../../../security/network-security.md)
+- [Governance by layer](../../../best-practices/governance.md)
 
 ## Microsoft Learn
 

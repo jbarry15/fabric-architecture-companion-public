@@ -8,11 +8,12 @@ Use this category for platform administration, workspace and domain governance, 
 
 | Reference | Type | Use for |
 |-----------|------|---------|
-| [FabricSecurity runbooks](fabric-security-runbooks.md) | Guide | Workload-specific security procedures and validation |
-| [Fabric Atlas](fabric-atlas.md) | Reference implementation | Workspace metadata, lineage, and access-evidence review |
-| [FabricAPI](fabric-api.md) | Reference implementation | Python/CLI inventory and audit examples |
+| [FabricSecurity runbooks](repos/fabric-security-runbooks.md) | Guide | Workload-specific security procedures and validation |
+| [Fabric Atlas](repos/fabric-atlas.md) | Reference implementation | Workspace metadata, lineage, and access-evidence review |
+| [FabricAPI](repos/fabric-api.md) | Reference implementation | Python/CLI inventory and audit examples |
+| [Terraform provider for Fabric](repos/terraform-provider-fabric.md) | Guide | Infrastructure-as-code plans; upstream excludes normal Microsoft/Fabric support coverage |
 
-These are community references, not security certifications. Review source permissions, metadata visibility, and current Microsoft Learn support before use.
+These are open-source references, not security certifications. Review source permissions, metadata visibility, and current Microsoft Learn support before use.
 
 ## Related guidance
 

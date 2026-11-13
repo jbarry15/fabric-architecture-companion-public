@@ -1,6 +1,6 @@
 # Fabric Atlas workspace intelligence
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -34,8 +34,8 @@ Follow the upstream installation and coverage documentation. Reconcile findings 
 
 ## Related guidance
 
-- [Governance by layer](../../best-practices/governance.md)
-- [Security best practices](../../security/best-practices.md)
+- [Governance by layer](../../../best-practices/governance.md)
+- [Security best practices](../../../security/best-practices.md)
 
 ## Microsoft Learn
 

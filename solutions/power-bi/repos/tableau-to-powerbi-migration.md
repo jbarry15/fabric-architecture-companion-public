@@ -1,6 +1,6 @@
 # AI-assisted Tableau to Power BI migration
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -34,8 +34,8 @@ Review the upstream operator guide and [capabilities and limitations](https://gi
 
 ## Related guidance
 
-- [Semantic modeling](../../best-practices/semantic-modeling.md)
-- [Power BI connectivity decisions](connectivity-decisions.md)
+- [Semantic modeling](../../../best-practices/semantic-modeling.md)
+- [Power BI connectivity decisions](../connectivity-decisions.md)
 
 ## Microsoft Learn
 

@@ -1,6 +1,6 @@
 # Private-network deployment
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -40,8 +40,8 @@ Evaluate the public community example for a self-hosted Azure DevOps agent insid
 
 ## Related guidance
 
-- [CI/CD deployment best practices](../../best-practices/ci-cd-deployment.md)
-- [Network security patterns](../../security/network-security.md)
+- [CI/CD deployment best practices](../../../best-practices/ci-cd-deployment.md)
+- [Network security patterns](../../../security/network-security.md)
 - [Dev, Test, and Prod deployment](dev-test-prod-deployment.md)
 
 ## Microsoft Learn

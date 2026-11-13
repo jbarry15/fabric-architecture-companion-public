@@ -1,6 +1,6 @@
 # FabricAPI inventory and audit examples
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -34,8 +34,8 @@ Review the selected command, authentication path, and export destination before 
 
 ## Related guidance
 
-- [Governance by layer](../../best-practices/governance.md)
-- [Security best practices](../../security/best-practices.md)
+- [Governance by layer](../../../best-practices/governance.md)
+- [Security best practices](../../../security/best-practices.md)
 
 ## Microsoft Learn
 

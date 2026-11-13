@@ -1,6 +1,6 @@
 # IQ supply-chain demo
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -41,9 +41,9 @@ Use the public accelerator to demonstrate a governed decision-support loop, keep
 
 ## Related guidance
 
-- [Ontologies and Fabric IQ](../../fabric-data-agents/ontologies-fabric-iq.md)
-- [Data architecture for agents](../../fabric-data-agents/data-architecture-for-agents.md)
-- [Data Agent consumption patterns](../../fabric-data-agents/consumption-patterns.md)
+- [Ontologies and Fabric IQ](../../../fabric-data-agents/ontologies-fabric-iq.md)
+- [Data architecture for agents](../../../fabric-data-agents/data-architecture-for-agents.md)
+- [Data Agent consumption patterns](../../../fabric-data-agents/consumption-patterns.md)
 
 ## Microsoft Learn
 

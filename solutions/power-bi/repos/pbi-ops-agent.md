@@ -1,6 +1,6 @@
 # Power BI Ops Agent
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -36,8 +36,8 @@ The upstream agent recommends changes rather than modifying models, refreshing d
 
 ## Related guidance
 
-- [Semantic modeling](../../best-practices/semantic-modeling.md)
-- [Real-Time Intelligence](../../best-practices/real-time-intelligence.md)
+- [Semantic modeling](../../../best-practices/semantic-modeling.md)
+- [Real-Time Intelligence](../../../best-practices/real-time-intelligence.md)
 
 ## Microsoft Learn
 

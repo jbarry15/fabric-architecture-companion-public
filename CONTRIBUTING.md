@@ -41,6 +41,7 @@ If a scenario comes from real field work, convert it into a reusable pattern and
 3. Prefer Microsoft Learn links for current product behavior, requirements, limits, and setup steps.
 4. If repo guidance and Microsoft Learn differ, follow Microsoft Learn and call out the local page that may need updating.
 5. For notebooks or scripts, avoid checked-in outputs that contain environment, tenant, customer, or execution data.
+6. Follow the [Solutions placement guidance](solutions/README.md#adding-a-solution): put external-repository reference cards under the workload's `repos/` folder and keep original scenario and decision guides at the workload root.
 
 ## AI-assisted contributions
 

@@ -1,6 +1,6 @@
 # Fabric IQ and Copilot finance demo
 
-[Solutions catalog](../README.md)
+[Solutions catalog](../../README.md)
 
 | Detail | Value |
 |--------|-------|
@@ -36,8 +36,8 @@ Start with a small, approved demo scope. Reconcile answers across available surf
 
 ## Related guidance
 
-- [Semantic modeling](../../best-practices/semantic-modeling.md)
-- [Fabric IQ MCP reference](../../fabric-mcps/docs/fabric-iq-mcp-server.md)
+- [Semantic modeling](../../../best-practices/semantic-modeling.md)
+- [Fabric IQ MCP reference](../../../fabric-mcps/docs/fabric-iq-mcp-server.md)
 
 ## Microsoft Learn
 

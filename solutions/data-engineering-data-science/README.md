@@ -4,7 +4,9 @@
 
 Use this category for lakehouse engineering, Spark transformations, notebooks, machine learning, and model evaluation scenarios.
 
-No solution cards are cataloged here yet.
+## Related repository references
+
+- [Synapse to Fabric migration utilities](../data-warehouse/repos/fabric-migration.md) - includes the Spark migration path; the canonical card is cataloged once under Data Warehouse.
 
 ## Related guidance
 
