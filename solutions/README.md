@@ -23,7 +23,7 @@ These are reference cards, not customer case studies, production certifications,
 
 Place each solution under its primary workload or cross-cutting category. List related workloads in the card rather than duplicating it. These are navigation categories, not an official product-workload taxonomy.
 
-The catalog contains eight entries: six scenario cards and two Fabric Apps repository references. Categories without cataloged entries have starter READMEs with related guidance, not additional implemented solutions. The `presentations/` and `repos/` subfolders index public references while keeping assets upstream.
+The catalog contains nine entries: seven scenario cards and two Fabric Apps repository references. Categories without cataloged entries have starter READMEs with related guidance, not additional implemented solutions. The `presentations/` and `repos/` subfolders index public references while keeping assets upstream.
 
 ## Solution catalog
 
@@ -33,6 +33,7 @@ The catalog contains eight entries: six scenario cards and two Fabric Apps repos
 | [Warehouse capacity investigation](data-warehouse/capacity-investigation.md) | Data Warehouse | Guide | Correlation is not causal attribution; the report can cache sensitive SQL text and identities |
 | [Private-network deployment](fabric-ci-cd/private-network-deployment.md) | Fabric CI/CD | Reference implementation | Community example scoped to one standalone notebook |
 | [Dev, Test, and Prod deployment](fabric-ci-cd/dev-test-prod-deployment.md) | Fabric CI/CD | Reference implementation | Community example; verify item support, environment bindings, and release gates |
+| [FabricCICD runbook series](fabric-ci-cd/fabriccicd-runbooks.md) | Fabric CI/CD | Guide | Community series of 25 runbooks; verify current product support and environment requirements |
 | [Power BI connectivity decisions](power-bi/connectivity-decisions.md) | Power BI | Guide | Choose the storage mode against actual security, freshness, and capacity constraints |
 | [IQ supply-chain demo](fabric-ai-iq-ontology/supply-chain-demo.md) | Fabric AI, IQ, and Ontology | Demo | Synthetic-data accelerator with preview dependencies; intended for evaluation |
 
