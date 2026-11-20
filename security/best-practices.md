@@ -117,6 +117,8 @@ OneLake security is the **data-plane** security model: define granular, role-bas
 
 ## 4. Governance & Compliance
 
+**Microsoft Purview protections still apply to supported Fabric workloads.** The retirement of Purview Unified Catalog and classic data governance does not retire Information Protection, Data Loss Prevention (DLP), Audit, Insider Risk Management, or supported AI compliance controls. Use [OneLake catalog for Fabric discovery and governance](../best-practices/governance.md#transition-from-purview-unified-catalog-to-onelake-catalog), and [Microsoft Purview for protection, audit, and compliance](https://learn.microsoft.com/en-us/fabric/governance/microsoft-purview-fabric). Verify licensing, workload coverage, and policy behavior before relying on a control.
+
 ### Apply Sensitivity Labels from Microsoft Purview
 
 - Define a labeling taxonomy aligned with your data classification policy
@@ -126,9 +128,9 @@ OneLake security is the **data-plane** security model: define granular, role-bas
 
 > **Reference**: [Information Protection in Fabric](https://learn.microsoft.com/en-us/fabric/governance/information-protection)
 
-### Enable Audit Logging
+### Use Purview Audit and OneLake Diagnostics
 
-- Ensure Fabric audit logs flow to Microsoft Purview or your SIEM
+- Use [Microsoft Purview Audit](https://learn.microsoft.com/en-us/fabric/admin/track-user-activities) to investigate Fabric user and admin activity. Forward relevant events to your SIEM if needed; verify the event types and retention your investigation requires.
 - Enable **OneLake diagnostics** where data-plane visibility matters; it streams workspace-level data access events into a lakehouse so teams can answer "who accessed what, when, and how" across Fabric UI, API, engine, and shortcut access paths
 - Use immutable OneLake diagnostic logs when audit records must be tamper-resistant, and align cleanup jobs with the immutability and retention windows
 - Review the tenant setting for end-user identifiers in OneLake diagnostic logs so email/IP capture matches privacy and investigation requirements
