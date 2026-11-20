@@ -120,6 +120,8 @@ Every data agent runs on a runtime:
 
 Runtime selection doesn't control which data sources or preview source types you can add. Preview runtime behavior can change more frequently, so use it deliberately, test with the same ground-truth question set, and republish the agent when changing the runtime for the published version.
 
+The [November 2026 Fabric feature summary](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/fabric-november-2026-feature-summary/5414311) announced a **preview** of up to 1,000 tabular rows alongside an answer in the standard runtime. Verify what your tenant and consuming client return. Treat the table as a preview, not a complete result set or an export path; use the governed source or a dedicated report when completeness matters.
+
 For semantic models, Advanced DAX generation can improve complex question handling by planning, inspecting intermediate results, resolving ambiguous filters, and searching model values before answering. Treat it as an evaluation candidate until it is in the standard runtime for your tenant; keep production agents on the stable runtime unless the customer explicitly accepts preview behavior and test coverage.
 
 AI-assisted agent creation, such as Build Agent with AI where available, can accelerate first-draft instructions and source configuration. Review generated scope, examples, source selection, and unsupported-use-case wording before publishing; don't let generated instructions replace domain-owner validation.

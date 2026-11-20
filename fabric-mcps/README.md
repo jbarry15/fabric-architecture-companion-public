@@ -48,6 +48,8 @@ Some Fabric workloads have both Microsoft-hosted remote MCP servers and local/se
 | Data agents | [Fabric Data Agent MCP Server](docs/fabric-data-agent-mcp-server.md) | No local counterpart listed | Published data agents expose the remote MCP endpoint |
 | Ontology | [Ontology MCP Server](docs/ontology-mcp-server.md) | No local counterpart listed | Item-scoped preview endpoint for ontology context |
 
+**Fabric IQ client previews:** The [Ignite 2026 announcements](https://news.microsoft.com/events/ignite/2026/book-of-news/) describe ontology context in GitHub Copilot and separate connectors for querying Power BI semantic models from ChatGPT and Claude. These are different integration surfaces. Before piloting, verify tenant availability, the identity used to query data, and each client's data-handling terms.
+
 ## Related integrations and samples
 
 | Resource | Hosting | Use it for |
