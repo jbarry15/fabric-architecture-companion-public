@@ -55,6 +55,8 @@ Effective governance in Fabric maps policies to Medallion layers and business do
 | **Purview / compliance** | Sensitivity labels, DLP, metadata scanning, lineage, and auditing |
 | **Deployment pipelines + Git** | Change control, review, promotion, and rollback |
 
+Use the [current Domains REST API contract](https://learn.microsoft.com/en-us/rest/api/fabric/admin/domains/list-domains) for domain automation. The preview contract was removed in November 2026; remove preview query parameters and validate the request and response shapes before updating existing automation. This retirement does not apply to the separate item relations API.
+
 ## Lineage-aware impact analysis pattern
 
 Use the Fabric item relations API (beta) when the question is "what depends on this item?" or "what does this item depend on?" and the answer needs to be automated instead of inspected manually in the portal. The API returns related Fabric items, relation edges, and referenced workspaces, so governance tools and agents can reason over actual dependencies instead of inferred naming conventions.

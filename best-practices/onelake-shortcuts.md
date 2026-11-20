@@ -156,8 +156,8 @@ Shortcuts are the foundation for **zero-copy distribution** — presenting data 
 - Managing every end user on the target data becomes a scale concern (e.g., delegate per-region access to team owners via a service principal)
 - You need to share data with **another Fabric tenant**, or reach **external** sources such as AWS S3 or GCS (external shortcuts always operate as delegated)
 
-![Delegated shortcuts let a data owner represent each consuming team with a service principal and delegate per-user access management, scaling to tens of thousands of users without copying data](images/onelake-shortcut-delegated-scaleout.png)
-*Use delegated shortcuts to scale-out access management to tens of thousands of users.*
+![Example of a central lakehouse serving three regional workspaces through delegated shortcuts and separate service principals](images/onelake-shortcut-delegated-scaleout.png)
+*This illustrates delegated access by region. The user counts are example sizes, not a capacity or performance guarantee.*
 
 > **Design guidance:** Prefer **passthrough** for source-managed team collaboration. Reach for **delegated** shortcuts when publishing through curated serving layers — be explicit about where delegated mode is in play, document the trust boundary, and design security reviews around the actual engine path users take. Note that delegated OneLake shortcuts are a newer capability (rolled out alongside SharePoint/OneDrive shortcuts); confirm current availability for your tenant.
 

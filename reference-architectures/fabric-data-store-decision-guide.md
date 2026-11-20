@@ -13,6 +13,7 @@ Choose the Fabric data store by workload shape, not by habit. All Fabric data st
 | Streaming event data, logs, telemetry, high-granularity interactive analytics | **Eventhouse** | Optimized for time-series, log, geospatial, and high-volume interactive analytics with KQL and real-time dashboards |
 | NoSQL app data, evolving JSON documents, AI app state, vector or hybrid search | **Cosmos DB in Fabric** | Operational NoSQL store with OneLake availability and AI-oriented indexing/search patterns |
 | Operational relational app data, OLTP, normalized transactional workloads | **SQL database in Fabric** | Transactional SQL engine for application write paths, with replicated analytical access through OneLake |
+| PostgreSQL-compatible operational applications | **Fabric HorizonDB (preview)** | Native managed PostgreSQL with OneLake integration. Evaluate only within current preview limits, including creator-only connectivity |
 | Enterprise data warehouse, SQL BI, OLAP, dimensional serving, multi-table SQL transactions | **Fabric Data Warehouse** | T-SQL warehouse serving, star schema modeling, SQL tools, and BI/OLAP workloads |
 | Big data engineering, ML, notebooks, semi-structured or unstructured data, Delta processing | **Lakehouse** | Spark and Delta-first data engineering/ML pattern for medallion processing and open data |
 
@@ -68,6 +69,7 @@ Use operational stores for operational writes, Eventhouse for event analytics, L
 - [Databases in Fabric](https://learn.microsoft.com/en-us/fabric/database/)
 - [Eventhouse](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/eventhouse)
 - [SQL database in Fabric](https://learn.microsoft.com/en-us/fabric/database/sql/overview)
+- [Fabric HorizonDB (preview)](https://learn.microsoft.com/en-us/fabric/database/horizondb/overview)
 - [Cosmos DB in Fabric](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/overview)
 - [Fabric Data Warehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing)
 - [Lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-overview)

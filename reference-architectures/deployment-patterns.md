@@ -95,7 +95,7 @@ Tenant A (Production)                    Tenant B (Development/ISV)
 | **Bursting** | Fabric allows temporary CU bursting; monitor to avoid throttling |
 | **Pause/resume** | Dev/Test capacities can be paused off-hours to save cost |
 | **Geo-residency** | Each capacity is bound to an Azure region; use for data sovereignty |
-| **F64+ threshold** | Free viewer access to Power BI content (no Pro license needed) |
+| **F64+ threshold** | Users with a Power BI Free license can view content on qualifying capacity with the appropriate viewer permissions. [Check requirements](https://learn.microsoft.com/en-us/power-bi/fundamentals/end-user-features) |
 
 ## Fabric domains
 

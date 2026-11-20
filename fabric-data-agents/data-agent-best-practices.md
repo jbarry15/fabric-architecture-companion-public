@@ -231,5 +231,5 @@ The [Fabric Data Agent Community Hub](community-resources.md) is a useful supple
 - [Prep data for AI](https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-prepare-data-ai)
 - [Data Agent example queries](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-example-queries)
 - [Optimize a model for performance](https://learn.microsoft.com/en-us/training/modules/optimize-model-power-bi/)
-- [Power BI Modeling MCP server](https://github.com/microsoft/powerbi-modeling-mcp) — LLM-assisted renaming of model objects
+- [Power BI Authoring MCP server (local)](https://github.com/microsoft/powerbi-modeling-mcp) — LLM-assisted renaming of model objects
 - [Fabric Data Agent Community Hub](https://fabricdataagent.com/)

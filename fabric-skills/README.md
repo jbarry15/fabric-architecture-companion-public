@@ -103,7 +103,7 @@ The source repo warns of frequent restructuring and breaking changes. Pin and te
 
 Skills provide guidance and repeatable agent instructions. MCP servers provide live tool access to data sources, APIs, local files, and Fabric/Power BI operations.
 
-- Use [Fabric MCP resources](../fabric-mcps/README.md) in this repo for Fabric MCP Server, Fabric Core MCP Server, Power BI Modeling MCP Server, best practices, and anti-patterns.
+- Use [Fabric MCP resources](../fabric-mcps/README.md) in this repo for Fabric MCP Server, Fabric Core MCP Server, Power BI Authoring MCP Server, best practices, and anti-patterns.
 - Use upstream [Skills for Fabric MCP setup](https://github.com/microsoft/skills-for-fabric/tree/main/mcp-setup) when a skill workflow needs MCP configuration details.
 
 ## Resource format

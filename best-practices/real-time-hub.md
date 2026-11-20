@@ -2,7 +2,7 @@
 
 Based on [Real-Time hub overview](https://learn.microsoft.com/en-us/fabric/real-time-hub/real-time-hub-overview) and [Business events overview](https://learn.microsoft.com/en-us/fabric/real-time-hub/business-events/business-events-overview).
 
-> **Preview:** Business events are in preview. Validate current capabilities, tenant settings, schema registry behavior, and supported publishers/consumers before committing to production designs.
+> **Generally available:** [Business Events reached general availability in September 2026](https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new). Check support for each publisher and consumer separately. For example, an [Eventstream consumer](https://learn.microsoft.com/en-us/fabric/real-time-hub/add-source-business-events#prerequisites) must be in the same region as the event schema set.
 
 ## Overview
 
@@ -46,7 +46,7 @@ Business events are not raw telemetry. They represent meaningful changes that do
 - ✅ **Use the schema registry as the contract** — standardize event names, fields, types, semantic meaning, and versioning before broad reuse.
 - ✅ **Make Eventstreams schema-aware where event shape matters** — use schemas to separate raw ingestion flexibility from governed downstream contracts.
 - ✅ **Separate publishers from consumers** — let publishers emit events once and allow Activator, Eventhouse, notebooks, functions, Power Automate, or downstream processes to subscribe independently.
-- ✅ **Store events for analysis** — land business events in Eventhouse when historical analysis, dashboards, replay-style troubleshooting, or AI/ML context is needed.
+- ✅ **Use the default Eventhouse for analysis** — Fabric automatically stores published business events there. Verify access and retention before using it for historical analysis, dashboards, troubleshooting, or AI/ML context.
 - ✅ **Preview with observability** — use data preview and Eventhouse queries to confirm payload shape, routing, and consumer behavior before enabling actions.
 
 ### Action and automation
