@@ -8,9 +8,9 @@ Most contributions require you to agree to a Contributor License Agreement (CLA)
 
 When you submit a pull request, a CLA bot can automatically determine whether you need to provide a CLA and decorate the PR appropriately with a label or comment. Follow the instructions provided by the bot. You only need to do this once across repositories that use the Microsoft CLA.
 
-## Code of Conduct
+## Community expectations
 
-This project follows the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or comments.
+Keep issues, pull requests, and reviews respectful and constructive. Focus feedback on the work, not the person.
 
 ## What to contribute
 
