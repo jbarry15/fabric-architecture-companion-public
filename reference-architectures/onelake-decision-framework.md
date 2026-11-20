@@ -67,7 +67,7 @@ As organizations move from isolated AI experiments to production-ready, agent-dr
 
 ## Middle layer: Proven Architectural Patterns
 
-Five reusable patterns, drawn from production OneLake deployments, describe how customers implement the right architecture for common data challenges. Patterns compose — most enterprises combine several.
+Five reusable patterns describe how to address common data challenges with OneLake. Teams can combine patterns to fit their requirements.
 
 ### Pattern 1 — Data Virtualization (unify without moving data)
 
@@ -75,7 +75,7 @@ Five reusable patterns, drawn from production OneLake deployments, describe how 
 
 **Key benefits:** Unify cloud and on-premises systems without copying/replicating; cut onboarding time; retire legacy pipelines and workflows; process data in place.
 
-> **In practice:** A global healthcare distributor unified ten disconnected systems (cloud ERPs + on-prem platforms) with internal/external shortcuts — no data movement — cutting onboarding time ~40% and retiring hundreds of legacy workflows. A global quick-service restaurant chain replaced large ingestion pipelines with shortcuts to AWS S3 JSON and Apache Iceberg tables, processing billions of rows in place from Fabric Spark notebooks and reducing forecasting time ~80% across 5,000+ stores.
+> **Illustrative example:** An analytics team uses shortcuts to reference supported cloud storage and existing OneLake tables, then materializes only the datasets that require transformation or a performance-optimized copy.
 
 ### Pattern 2 — Medallion Architecture (Bronze / Silver / Gold)
 
@@ -91,7 +91,7 @@ Five reusable patterns, drawn from production OneLake deployments, describe how 
 
 **Key benefits:** Scales data ownership across teams; improves accountability and quality; enables reuse and discovery across domains; reduces dependence on a central team; preserves enterprise-wide governance even as authority is federated.
 
-> **In practice:** A global software/content-management provider built a certified data mesh in Fabric — a central platform team curates the foundation while Finance, Marketing, Customer Success, and Sales domains build on a single certified Gold layer with zero data duplication. A global enterprise with twelve digital platforms consolidated onto a domain-aligned Fabric environment (per-platform workspaces and capacity) publishing data products into a shared OneLake via ADLS Gen2 shortcuts, selective mirroring, and custom ACL automation.
+> **Illustrative example:** A finance domain publishes a governed Gold table in OneLake. A planning team references it through a shortcut and validates access under both producer and consumer identities.
 
 ### Pattern 4 — Platform Simplification across AI & Analytics
 
@@ -99,7 +99,7 @@ Five reusable patterns, drawn from production OneLake deployments, describe how 
 
 **Key benefits:** Lower total cost of ownership (fewer licenses, pipelines, and hand-offs); simpler operations and faster onboarding; one governance and security model; faster time-to-insight via Direct Lake and integrated semantic models. Curated Power BI semantic models can jump-start Fabric IQ ontologies that ground agentic AI (in Fabric Data Agents, M365 Copilot, Microsoft Foundry, or external tools via the Ontology MCP Server).
 
-> **In practice:** A national retail chain replaced a Snowflake-based reporting stack with a OneLake-centric Fabric platform — virtualizing analytical data as Iceberg tables in ADLS Gen2 via shortcuts and rebuilding reports on Power BI Direct Lake — removing 1.5-hour refresh cycles and lowering cost. A global semiconductor company consolidated ERP, CRM, demand-planning, and financial sources onto one governed medallion lakehouse with Direct Lake semantic models.
+> **Illustrative example:** A BI team pilots a Direct Lake semantic model on curated OneLake tables. It compares freshness, query performance, and operating cost with the existing reporting stack before retiring any components.
 
 ### Pattern 5 — External Data Sharing Across Business Ecosystems
 
@@ -107,7 +107,7 @@ Five reusable patterns, drawn from production OneLake deployments, describe how 
 
 **Key benefits:** Turns slow batch exports into live, real-time collaboration; reduces integration complexity and duplication; opens new data-sharing and monetization models; preserves centralized governance over what is shared, with whom, and under what conditions.
 
-> **In practice:** A global heavy-equipment manufacturer used OneLake External Data Sharing to give each dealer secure, bidirectional, zero-copy access to corporate Dataverse and operational data via Fabric Link, using Iceberg shortcuts and mirroring to interoperate with a corporate Snowflake environment across 20+ dealers. A global field-services enterprise established a hub-and-spoke OneLake architecture governing zero-copy cross-tenant virtualization, selectively sharing curated datasets with external partners.
+> **Illustrative example:** A producer shares a curated inventory dataset with a partner in another tenant. The teams verify that the partner can access only the intended data and test how to revoke access before expanding the share.
 
 ---
 

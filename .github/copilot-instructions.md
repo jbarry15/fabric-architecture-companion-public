@@ -22,14 +22,14 @@ When answering architecture questions or reviewing designs, apply these principl
 
 Use sources in this order:
 
-1. **Repository guidance** — Use relevant Markdown files to identify the recommended pattern, trade-offs, anti-patterns, and practical field guidance.
+1. **Repository guidance** — Use relevant Markdown files to identify the recommended pattern, trade-offs, anti-patterns, and implementation guidance.
 2. **Microsoft Learn verification** — Verify current product behavior, prerequisites, limitations, availability, and implementation steps.
 3. **Response synthesis** — Give one direct recommendation that combines both sources.
 
 ### Citation rules
 
 - Cite Microsoft Learn for official product requirements and configuration steps.
-- Cite repository files only when discussing this repository's opinionated recommendation or when the user asks for internal guidance.
+- Cite repository files when discussing this repository's recommendations.
 - Prefer 1-3 highly relevant Microsoft Learn links; do not provide a large reference list.
 - Link directly to the relevant article or section, not a general documentation landing page.
 
@@ -50,7 +50,7 @@ Use sources in this order:
   - **Microsoft-confirmed behavior** — official product support or status.
   - **Customer validation required** — tenant settings, approvals, licensing, networking, or environment-specific constraints.
 - Do not imply that repository recommendations are official Microsoft requirements.
-- Do not expose internal field evidence, customer names, or internal links unless the user explicitly requests them and they are approved to share.
+- Use only public sources for citations. Do not include private links, non-public material, or identifying customer details.
 
 ### Response format
 

@@ -50,9 +50,9 @@ The catalog contains 20 entries: two scenario and decision guides and 18 reposit
 | [AI-assisted Tableau migration](power-bi/repos/tableau-to-powerbi-migration.md) | Power BI | Reference implementation | Generated output requires independent numeric, functional, and security validation |
 | [Power BI Ops Agent](power-bi/repos/pbi-ops-agent.md) | Power BI | Demo | Proof of concept; diagnostic recommendations are not automatic remediation |
 | [IQ supply-chain demo](fabric-ai-iq-ontology/repos/supply-chain-demo.md) | Fabric AI, IQ, and Ontology | Demo | Synthetic-data accelerator with preview dependencies; intended for evaluation |
-| [Fabric IQ and Copilot finance demo](fabric-ai-iq-ontology/repos/fabric-iq-copilot-demo.md) | Fabric AI, IQ, and Ontology | Demo | Employee-only setup reference; public reproducibility is not established |
+| [Fabric IQ and Copilot finance demo](fabric-ai-iq-ontology/repos/fabric-iq-copilot-demo.md) | Fabric AI, IQ, and Ontology | Demo | Public demo materials are not a complete setup guide |
 | [Microsoft Rayfin](fabric-apps/repos/microsoft-rayfin.md) | Fabric Apps | Guide | Fabric Apps is preview; local frontend development can deploy a Fabric backend |
-| [Rayfin Onboarding 2026](fabric-apps/repos/rayfin-onboarding-2026.md) | Fabric Apps | Workshop | Adapt event-specific setup; validate separate data-agent prerequisites |
+| [Rayfin Onboarding 2026](fabric-apps/repos/rayfin-onboarding-2026.md) | Fabric Apps | Workshop | Use public Fabric setup guidance and verify the separate data-agent prerequisites |
 | [Operations IQ](fabric-apps/repos/operations-iq.md) | Fabric Apps | Reference implementation | Fabric Apps preview; validate multi-service permissions and action approval |
 
 ## How to use a solution
@@ -72,7 +72,7 @@ Put cards centered on an external repository, including repository-backed worksh
 
 List each card once in this catalog, keep category indexes and relative links current, and leave implementation code and presentation assets upstream.
 
-Write an original summary grounded in public sources. Exclude customer identifiers, private links, internal evidence, and non-public product claims. Label each card as a **Workshop**, **Demo**, **Reference implementation**, or **Guide**, and make preview dependencies explicit.
+Write an original summary grounded in public sources. Exclude customer identifiers, private links, and non-public material. Label each card as a **Workshop**, **Demo**, **Reference implementation**, or **Guide**, and make preview dependencies explicit.
 
 ## Related sections
 
