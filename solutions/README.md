@@ -79,4 +79,3 @@ Write an original summary grounded in public sources. Exclude customer identifie
 - [Best practices](../README.md#-best-practices-17-docs) - recommended architecture principles
 - [Reference architectures](../reference-architectures/patterns-comparison.md) - target designs and trade-offs
 - [Toolbox](../toolbox/README.md) - tool and accelerator links
-- [Contributing](../CONTRIBUTING.md) - public-content and contribution requirements
