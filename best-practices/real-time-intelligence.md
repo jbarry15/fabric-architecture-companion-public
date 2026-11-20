@@ -52,6 +52,7 @@ RTI is a first-class citizen of OneLake, not a side silo:
 - ✅ **Use schema-aware Eventstreams for evolving events** — bind producers and consumers to a shared schema contract when event shapes can vary or need quality enforcement.
 - ✅ **Consider custom streaming connectors for nonstandard sources** — use them when built-in connectors don't cover a Kafka/open-source connector requirement, but validate preview/supportability before customer commitments.
 - ✅ **Use managed private endpoints for secure streaming sources** — when Eventstream ingests from Azure Event Hubs or Azure IoT Hub with public access disabled, use the GA managed private endpoint path instead of opening the source to public network access.
+- ✅ **Evaluate Azure Event Hubs shortcuts (preview) where public network access is allowed** — the [shortcut](https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/create-event-hubs-shortcut) uses an event hub as the default stream of an Eventstream. Check regional availability and same-tenant requirements, confirm the Azure request is approved and active, and verify that test events reach the intended destination. Keep the managed private endpoint path for namespaces with public network access disabled.
 
 ### Eventhouse / KQL modeling
 - ✅ **Let data organize by arrival time** — Eventhouse is optimized for time-based events; design tables and queries around time filters.

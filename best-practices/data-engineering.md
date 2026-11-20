@@ -87,8 +87,11 @@ Project Osmos is a fit for outcome-oriented data engineering work such as medall
 | **Use schemas for logical grouping** | Organize tables within a Lakehouse using schemas |
 | **Use Tables for structured data** | Delta tables in the `Tables/` section for queryable, governed data |
 | **Use Files for unstructured/landing** | Raw files in `Files/` before processing into Delta tables |
+| **Use file-backed materialized lake views for suitable Bronze loads** | Ingest CSV or Parquet already in OneLake into a managed Delta table without a separate Copy activity or notebook load |
 | **Centralize Materialized Lake Views** | Create all MLVs for a workspace in a single Lakehouse for clear DAG visibility |
 | **Naming conventions** | `snake_case` for tables, prefix with domain (`sales_orders`, `hr_employees`) |
+
+Use a [file-backed materialized lake view](https://learn.microsoft.com/en-us/fabric/data-engineering/materialized-lake-views/overview-materialized-lake-view) for an individual file, a physical OneLake folder, or a folder shortcut. Managed refresh discovers new files at a shortcut's root, but not new files in nested folders under the shortcut. If your source lands new files in nested partitions, use a physical OneLake folder or an explicit ingestion pipeline and verify that refresh picks up a newly landed partition.
 
 ### Capacity and cluster planning
 

@@ -4,7 +4,7 @@ Based on [Databases in Fabric](https://learn.microsoft.com/en-us/fabric/database
 
 ## Overview
 
-The **Database** workload brings **operational (OLTP) databases** natively into Fabric, sitting alongside the analytical stores (Warehouse, Lakehouse, Eventhouse). Two options:
+The **Database** workload brings **operational (OLTP) databases** natively into Fabric, sitting alongside the analytical stores (Warehouse, Lakehouse, Eventhouse).
 
 | Store | Type | Engine | Best for |
 |-------|------|--------|----------|
@@ -12,7 +12,7 @@ The **Database** workload brings **operational (OLTP) databases** natively into 
 | **[Fabric HorizonDB (preview)](https://learn.microsoft.com/en-us/fabric/database/horizondb/overview)** | Relational OLTP | PostgreSQL | Evaluate PostgreSQL-compatible applications and OneLake integration; only the database creator can connect during preview |
 | **[Cosmos DB in Fabric](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/overview)** | NoSQL | Same engine as Azure Cosmos DB for NoSQL | AI apps, semi-structured/evolving data, vector & hybrid search |
 
-**The key architectural value: operational data lands in OneLake automatically.** Both Fabric-native databases **auto-replicate to OneLake in open Delta/Parquet format in near real time** — no ETL and no separate copy pipeline. For external operational databases, use Fabric [Mirroring](mirroring.md) where supported, and reserve Data Factory ingestion for sources that can't replicate or mirror cleanly.
+**Use OneLake for analytics without querying the transactional store directly.** SQL database and Cosmos DB in Fabric replicate to OneLake in Delta format. Fabric HorizonDB mirrors eligible tables asynchronously during preview. For external operational databases, use Fabric [Mirroring](mirroring.md) where supported, and reserve Data Factory ingestion for sources that can't replicate or mirror cleanly.
 
 ```mermaid
 flowchart LR
@@ -32,6 +32,7 @@ All Fabric stores expose data in OneLake in open format by default — choose by
 | Ideal use case | Store |
 |----------------|-------|
 | Operational transactional (OLTP) app | **SQL database in Fabric** |
+| PostgreSQL-compatible transactional app or proof of concept | **Fabric HorizonDB (preview)** |
 | AI, NoSQL, vector / hybrid search | **Cosmos DB in Fabric** |
 | Streaming events, high-granularity interactive analytics | Eventhouse ([RTI](real-time-intelligence.md)) |
 | Enterprise data warehouse, SQL BI, OLAP, full SQL transactions | [Data Warehouse](https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing) |
@@ -48,11 +49,21 @@ All Fabric stores expose data in OneLake in open format by default — choose by
 - ✅ **Consume the OneLake replica for analytics** — build **[Direct Lake](direct-lake.md)** semantic models on the auto-replicated Delta tables; don't run BI DirectQuery against the live OLTP database.
 
 ### Ingestion & serving patterns
-- ✅ **Skip custom mirroring/ETL for Fabric-native databases** — replication to OneLake is automatic and near real time. See [SQL DB mirroring/replication](https://learn.microsoft.com/en-us/fabric/database/sql/mirroring-overview) and [Cosmos DB mirror to OneLake](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/mirror-onelake).
+- ✅ **Use built-in replication where supported** — see [SQL DB mirroring/replication](https://learn.microsoft.com/en-us/fabric/database/sql/mirroring-overview) and [Cosmos DB mirror to OneLake](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/mirror-onelake). Check table eligibility and validate freshness before relying on a replica.
 - ✅ **Use Mirroring or open mirroring for supported external operational sources** — let Fabric continuously replicate them into OneLake instead of building bespoke CDC pipelines. See [Mirroring best practices](mirroring.md).
 - ✅ **Use Copy job/pipelines for non-mirrorable sources** — APIs, flat files, custom feeds, or sources that need mapping/transformation at ingest still belong in Data Factory.
 - ✅ **Use [reverse ETL](https://learn.microsoft.com/en-us/fabric/database/sql/use-case-reverse-etl)** to serve curated Gold-layer OneLake data back into an operational database for low-latency app access.
 - ✅ **Consider [translytical apps](https://learn.microsoft.com/en-us/fabric/database/sql/use-case-translytical-applications)** where transactional and analytical needs converge on one platform.
+
+#### Fabric HorizonDB integration patterns (preview)
+
+| Need | Use | Watch out |
+|------|-----|-----------|
+| Analyze operational data in Fabric | **Mirroring** copies eligible PostgreSQL tables into OneLake | Changes replicate asynchronously. Validate table eligibility and freshness; don't assume read-after-write consistency. |
+| Read Fabric analytics from a PostgreSQL query | **Federation** reads supported Fabric data without copying it into PostgreSQL | Foreign tables are read-only. Verify the supported endpoints and source permissions. |
+| Serve selected analytical results from PostgreSQL | **Copy job** delivers results back to PostgreSQL for low-latency app reads | The preview path is full-copy and insert-oriented. Stage and validate results before publishing them with a repeatable, idempotent transaction. |
+
+Fabric HorizonDB is in preview and only the database creator can connect under the current [preview limitations](https://learn.microsoft.com/en-us/fabric/database/horizondb/limitations). Azure HorizonDB's GA status does not apply to the Fabric offering.
 
 ### Operations & security
 - ✅ **Lean on intelligent defaults** — SQL database enables automatic index creation and auto-tuning by default; avoid premature manual tuning.

@@ -16,11 +16,14 @@ A Fabric app runs as a **managed service** — Fabric handles hosting, networkin
 
 | Child service | Provides | Notes |
 |---------------|----------|-------|
-| **SQL database in Fabric** | Managed relational store; schema applied from your TypeScript decorators | **Read-only in the portal** — schema changes must come from code |
+| **Data service** | Managed relational store; schema applied from your TypeScript decorators | Use SQL database in Fabric for the SQL path, or evaluate [Fabric HorizonDB](https://learn.microsoft.com/en-us/fabric/database/horizondb/overview) for PostgreSQL (preview) |
 | **Authentication** | Fabric-brokered **Microsoft Entra ID SSO** | Fabric SSO exclusively; no other providers after deployment |
 | **Static Content** | Hosted frontend (HTML/CSS/JS) | Choose protected or anonymous access for static files; this is separate from backend data authorization |
+| **File storage** | OneLake-backed storage for documents, images, and attachments | Requires a configured Data service, supported Fabric capacity, the tenant setting for external app access to OneLake, and signed-in users with folder permissions |
 
 A single backend endpoint exposes `/api/graphql` (data API), `/auth` (authentication), and `/storage` (files).
+
+The diagram shows the SQL-backed path. For PostgreSQL, check the [Fabric HorizonDB preview limitations](https://learn.microsoft.com/en-us/fabric/database/horizondb/limitations) before choosing it.
 
 ```mermaid
 flowchart LR
@@ -55,16 +58,20 @@ Consider other options when you need:
 ### Identity & sharing
 - ✅ **Rely on Fabric SSO (Entra ID)** for authentication; design around a single, governed identity rather than custom auth.
 - ✅ **Grant least-privilege item permissions** — `Run and interact` for users, `Edit` only for developers who deploy, `Reshare` sparingly (requires workspace admin). Remember item-level permissions are **not** superseded by workspace roles.
+- ✅ **Separate frontend access from file access** — a public static frontend does not make uploads or attachments public. Define [folder permissions in Rayfin](https://learn.microsoft.com/en-us/fabric/apps/storage) and verify access as a representative signed-in user. Ask your admin to review the external OneLake access setting; it applies beyond this app.
+- ✅ **Pilot strict content security policy (preview)** — the [tenant setting](https://learn.microsoft.com/en-us/fabric/apps/content-security-policy) can block frontend requests or resources on public, sign-in-required, and embedded-only static sites. The policy isn't customizable. Scope enforcement to a test group first and exercise workflows that rely on external APIs, scripts, fonts, or WebAssembly rather than just checking that the home page loads.
 
 ### Data & platform fit
 - ✅ **Build on governed Fabric data** — the backing [SQL database in Fabric](databases-in-fabric.md) auto-replicates to OneLake as Delta, so app data is analytics-ready via [Direct Lake](direct-lake.md) with no extra ETL.
 - ✅ **Use apps as an agent/AI backend** — persistent, permissioned state for [data agents](../fabric-data-agents/data-agent-best-practices.md) grounded on the same estate.
-- ✅ **Right-size capacity** — Fabric Apps consume capacity units from the assigned capacity; monitor and plan capacity like any other workload.
+- ✅ **Right-size capacity** — capacity-backed apps consume capacity units from the assigned capacity. The [Power BI Pro app option](https://learn.microsoft.com/en-us/fabric/apps/licensing#power-bi-pro-limits) has separate limits and doesn't support file storage or public static sites.
 
 ### Lifecycle
-- ✅ **Choose where the backend runs** — the default `npx rayfin dev` workflow can provision or reuse a Fabric backend while running the frontend locally. Use [Rayfin Local](https://github.com/microsoft/rayfin-local) to run both locally without provisioning a Fabric workspace. Test connectors, identity, and permissions in Fabric before production; connectors that access Fabric still require connectivity and credentials.
-- ✅ **Manage the tenant prerequisite** — a tenant admin must enable the Fabric Apps workload, and the workspace must have Fabric capacity assigned.
+- ✅ **Choose where the backend runs** — the default `npx rayfin dev` workflow can provision or reuse a Fabric backend while running the frontend locally. Use [Rayfin Local](https://github.com/microsoft/rayfin-local) for supported local services. App file storage uses Fabric even during development; connectors that access Fabric still require connectivity and credentials.
+- ✅ **Check tenant and workspace prerequisites** — a tenant admin must enable the Fabric Apps workload. Use a workspace on supported capacity for capacity-backed services or a Pro workspace for the limited Power BI Pro option.
 - ✅ **Integrate with source control and pipelines** — keep the project in Git and align deployments with your [CI/CD practices](ci-cd-deployment.md).
+
+> **Preview:** [Power BI Desktop custom data apps](https://news.microsoft.com/events/ignite/2026/book-of-news/) let Power BI Pro users start from a governed semantic model and build an app for scenarios such as approvals or data entry. This is separate from the GA Rayfin workflow; OneLake-backed Fabric Apps Storage is not supported in Power BI Pro workspaces.
 
 ## Anti-patterns
 
