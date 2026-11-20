@@ -19,13 +19,13 @@ Treat a published Fabric data agent as a reusable governed analytical tool. Keep
 
 ### Fabric IQ in Copilot, Excel, and Fabric Apps
 
-The [Ignite 2026 Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) highlights three ways to bring Fabric IQ to users beyond the Fabric portal. Choose the surface by how users work, not by whether it can host a chat.
+Choose the Fabric IQ experience based on how users work: ask questions in Copilot Chat, analyze governed metrics in Excel, or embed Q&A in an app. See [Microsoft's Fabric IQ integration update](https://community.fabric.microsoft.com/blog/fbc_fabricupdatesblogs/bringing-trusted-fabric-iq-context-to-wherever-people-and-agents-work/5423049) for rollout details.
 
 | Surface | Best use | Architecture watch-out |
 |---------|----------|------------------------|
 | **Microsoft 365 Copilot Chat** | Ask questions in chat and ground answers in Power BI reports or semantic models. [Power BI data answering in Microsoft 365 Copilot Chat](https://learn.microsoft.com/en-us/fabric/iq/connectors/microsoft-365-copilot-overview) is GA. | Users need licensed access and permissions to the content; existing row-level and object-level security apply. This is distinct from [Microsoft Copilot embedded in Power BI and Fabric](https://learn.microsoft.com/en-us/fabric/iq/connectors/copilot-power-bi-fabric), which Microsoft Learn documents as preview. |
 | **Excel: Edit with Copilot (preview)** | Ask questions against governed Power BI semantic models and create live, Fabric-connected PivotTables for spreadsheet analysis. | Verify preview availability and model access. Test that the workbook queries the intended model for representative users rather than treating it as a static export. |
-| **Fabric Apps** | Embed conversational Q&A in an app using a Power BI semantic model for curated metrics or a published Fabric data agent for scoped analytical questions. | Verify availability and the identity used to query each source. Keep Q&A separate from write-back or workflow actions; grant and test those permissions separately. |
+| **Fabric Apps (conversational integration preview)** | Embed conversational Q&A in an app using a Power BI semantic model for curated metrics. Microsoft announced support for published Fabric data agents as coming to this preview. | Verify availability and the identity used to query each source. Keep Q&A separate from write-back or workflow actions; grant and test those permissions separately. |
 
 For GitHub Copilot ontology context and the ChatGPT and Claude semantic-model connectors, see the [Fabric IQ client previews in the MCP guide](../fabric-mcps/README.md#remote-vs-local-coverage).
 
