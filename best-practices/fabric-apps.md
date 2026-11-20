@@ -71,7 +71,7 @@ Consider other options when you need:
 - ✅ **Check tenant and workspace prerequisites** — a tenant admin must enable the Fabric Apps workload. Use a workspace on supported capacity for capacity-backed services or a Pro workspace for the limited Power BI Pro option.
 - ✅ **Integrate with source control and pipelines** — keep the project in Git and align deployments with your [CI/CD practices](ci-cd-deployment.md).
 
-> **Preview:** [Power BI Desktop custom data apps](https://news.microsoft.com/events/ignite/2026/book-of-news/) let Power BI Pro users start from a governed semantic model and build an app for scenarios such as approvals or data entry. This is separate from the GA Rayfin workflow; OneLake-backed Fabric Apps Storage is not supported in Power BI Pro workspaces.
+> **Upcoming preview:** [Power BI Desktop for Apps](https://learn.microsoft.com/en-us/power-bi/fundamentals/whats-new#general) lets users build interactive Fabric apps from a governed semantic model. This is separate from the GA Rayfin workflow; OneLake-backed Fabric Apps Storage is not supported in Power BI Pro workspaces.
 
 ## Anti-patterns
 
