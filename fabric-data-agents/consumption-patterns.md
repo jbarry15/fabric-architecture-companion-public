@@ -1,6 +1,6 @@
 # Fabric Data Agent consumption patterns
 
-Use this page after a Fabric data agent is scoped, tested, and published. The goal is not to duplicate Microsoft Learn setup steps; it is to capture the architecture guidance, best practices, and anti-patterns for exposing a governed Fabric data agent through other user and agent experiences.
+Use this page to choose where users consume governed Fabric answers. For data-agent integrations, scope, test, and publish the agent first. Some Fabric IQ experiences use Power BI semantic models directly and don't require a published data agent.
 
 ## Architecture verdict
 
@@ -16,6 +16,18 @@ Treat a published Fabric data agent as a reusable governed analytical tool. Keep
 | **MCP endpoint** | Use the published agent's MCP endpoint for custom MCP clients, VS Code, or agent frameworks that support MCP over streamable HTTP. | The endpoint is not a generic REST API. Clients must use the MCP flow and attach a valid Fabric bearer token. |
 | **Python / external applications** | Use the published data agent's MCP endpoint for runtime queries from custom apps. | The legacy Python sample uses the retired OpenAI Assistants API; don't use it as a working integration example. |
 | **Native Fabric visual responses** | Let users ask for charts directly in the Fabric data agent experience. | Rendered visuals are currently available in the Fabric data agent experience, not in external clients such as SDK, Teams, Microsoft 365 Copilot, or Foundry. |
+
+### Fabric IQ in Copilot, Excel, and Fabric Apps
+
+The [Ignite 2026 Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) highlights three ways to bring Fabric IQ to users beyond the Fabric portal. Choose the surface by how users work, not by whether it can host a chat.
+
+| Surface | Best use | Architecture watch-out |
+|---------|----------|------------------------|
+| **Microsoft 365 Copilot Chat** | Ask questions in chat and ground answers in Power BI reports or semantic models. [Power BI data answering in Microsoft 365 Copilot Chat](https://learn.microsoft.com/en-us/fabric/iq/connectors/microsoft-365-copilot-overview) is GA. | Users need licensed access and permissions to the content; existing row-level and object-level security apply. This is distinct from [Microsoft Copilot embedded in Power BI and Fabric](https://learn.microsoft.com/en-us/fabric/iq/connectors/copilot-power-bi-fabric), which Microsoft Learn documents as preview. |
+| **Excel: Edit with Copilot (preview)** | Ask questions against governed Power BI semantic models and create live, Fabric-connected PivotTables for spreadsheet analysis. | Verify preview availability and model access. Test that the workbook queries the intended model for representative users rather than treating it as a static export. |
+| **Fabric Apps** | Embed conversational Q&A in an app using a Power BI semantic model for curated metrics or a published Fabric data agent for scoped analytical questions. | Verify availability and the identity used to query each source. Keep Q&A separate from write-back or workflow actions; grant and test those permissions separately. |
+
+For GitHub Copilot ontology context and the ChatGPT and Claude semantic-model connectors, see the [Fabric IQ client previews in the MCP guide](../fabric-mcps/README.md#remote-vs-local-coverage).
 
 ## Best practices
 
