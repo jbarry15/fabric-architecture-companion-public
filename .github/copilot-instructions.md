@@ -38,6 +38,7 @@ Use sources in this order:
 - Microsoft Learn is authoritative for current product behavior.
 - If repository guidance conflicts with Microsoft Learn, follow Microsoft Learn and briefly identify the local document that may need updating.
 - Verify time-sensitive details such as preview status, licensing, limits, regional availability, and supported features before answering.
+- Distinguish the retirement of Purview Unified Catalog and classic data governance from Microsoft Purview's ongoing Fabric integrations. Recommend OneLake catalog for Fabric discovery and governance; continue to consider Purview sensitivity labels, DLP, Audit, Insider Risk Management, and AI compliance controls for supported workloads. Verify each control's coverage and licensing in [Microsoft Learn](https://learn.microsoft.com/en-us/fabric/governance/microsoft-purview-fabric).
 
 ### Response synthesis rules
 

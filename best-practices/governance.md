@@ -29,7 +29,7 @@ Effective governance in Fabric maps policies to Medallion layers and business do
 2. **Sensitivity labeling** — Classify data at ingestion; enforce downstream
 3. **Access via groups** — Microsoft Entra groups, never individual accounts
 4. **OneLake data access roles** — Use table/folder security, and row/column security where supported, especially for Viewer/item-read access patterns
-5. **Purview integration** — Use sensitivity labels, DLP, metadata scanning, lineage, and audit logs for regulated data
+5. **Purview integration** — Use sensitivity labels, DLP, and audit logs to protect and monitor regulated data; use OneLake catalog for Fabric discovery and supported lineage
 6. **Item relations impact analysis** — Use the Fabric item relations API (beta) when teams need programmatic upstream/downstream dependencies for impact checks, governance inventory, CI/CD gates, or lineage-aware AI workflows
 7. **OneLake diagnostics** — Enable workspace-level diagnostic logs for critical data domains so access through Fabric UI, APIs, engines, and shortcuts can be traced to a diagnostic lakehouse
 8. **Fabric policies** — Use centralized policy sets where available to enforce tenant/capacity governance rules and move high-value controls toward policy-as-code
@@ -52,10 +52,36 @@ Effective governance in Fabric maps policies to Medallion layers and business do
 | **Fabric item relations API (beta)** | Programmatic upstream/downstream item lineage, dependency edges, and referenced workspaces for impact analysis, governance evidence, CI/CD checks, and lineage-aware AI |
 | **Workspace monitoring** | Operational logs and metrics collected into a monitoring Eventhouse for troubleshooting, dashboards, alerts, and operations-agent investigation |
 | **Workspace outbound access protection** | Workspace-level control of outbound connectivity through managed private endpoints and data connection rules |
-| **Purview / compliance** | Sensitivity labels, DLP, metadata scanning, lineage, and auditing |
+| **Purview / compliance** | Sensitivity labels, DLP, audit, and risk and compliance controls for supported Fabric workloads |
 | **Deployment pipelines + Git** | Change control, review, promotion, and rollback |
 
 Use the [current Domains REST API contract](https://learn.microsoft.com/en-us/rest/api/fabric/admin/domains/list-domains) for domain automation. The preview contract was removed in November 2026; remove preview query parameters and validate the request and response shapes before updating existing automation. This retirement does not apply to the separate item relations API.
+
+## Transition from Purview Unified Catalog to OneLake catalog
+
+[Microsoft is retiring Purview Unified Catalog and classic Purview data governance](https://learn.microsoft.com/en-us/purview/unified-catalog). New accounts can no longer be created, and existing capabilities remain in maintenance mode through **November 12, 2027**. The retirement does not apply to [Purview's protection and compliance features for Fabric](https://learn.microsoft.com/en-us/fabric/governance/microsoft-purview-fabric).
+
+Use **OneLake catalog** to discover Fabric items, see who owns them, review lineage for supported items, and act on governance insights. Enforce access through the workspace, item, OneLake, or source permissions that apply to the actual query path. Keep **Microsoft Purview** for sensitivity labels, DLP, audit, insider risk, and other compliance controls where supported. Finding an item in the catalog does not grant access to its data.
+
+Move workflows by governance outcome, not by catalog object. OneLake catalog is not a one-to-one replacement for external metadata scanning, business glossaries, critical data elements, or cross-system lineage. Keep a tool or process in place for requirements Fabric does not meet.
+
+### Transition checklist
+
+This repository checklist adapts the [Microsoft transition article](https://techcommunity.microsoft.com/blog/analyticsonazure/from-purview-data-governance-to-the-fabric-onelake-catalog/4573422). Saving test evidence and requiring owner sign-off are repository recommendations, not Microsoft requirements.
+
+- [ ] **Inventory and assign each dependency.** Record the outcome, owner, downstream consumers, and disposition: move to Fabric, retain in Purview, or cover with another tool or process. Include external scans, glossary terms, critical data elements, cross-system lineage, and API consumers. Define a pass/fail criterion for each requirement before the pilot.
+- [ ] **Pilot one domain and one representative asset.** Verify that an authorized user can discover and query it, and that a user without access cannot read it through the actual consumption path, such as a report, SQL endpoint, or agent. Check the lineage the workflow depends on, verify applicable sensitivity labels and expected DLP behavior, and confirm the expected activity is visible in Purview Audit. Save the results as cutover evidence.
+- [ ] **Cut over in waves without interrupting protections.** Keep Purview security and compliance controls active. Update discovery links and integrations only after the domain owner and security or compliance owner sign off on the evidence. Retire each legacy scan or workflow only after its replacement passes the acceptance criteria. For contractual obligations or highly regulated workloads, [Microsoft recommends engaging your account team early](https://techcommunity.microsoft.com/blog/microsoft-security-blog/a-next-step-in-the-evolution-of-the-microsoft-data-governance-strategy/4572227).
+
+### Microsoft Learn references for the transition
+
+| What to verify | Microsoft Learn guidance |
+|----------------|-------------------------|
+| Inventory legacy dependencies | [Purview governance planning](https://learn.microsoft.com/en-us/purview/data-governance-plan) identifies the domains, collections, scans, and data products to inventory. [Classic glossary export](https://learn.microsoft.com/en-us/purview/legacy/how-to-import-export-glossary) documents how to preserve terms as CSV; it isn't a OneLake catalog import path. |
+| Design the Fabric operating model | [Fabric governance in a unified data platform](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/data/fabric-governance-unified-data-platform) covers ownership and access boundaries. [Get started with Fabric governance](https://learn.microsoft.com/en-us/fabric/governance/get-started-with-fabric-governance) walks through discovery, organization, classification, and lineage. |
+| Verify discovery, governance health, and lineage | [OneLake catalog overview](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview) explains Explore, Govern, and Secure. [Govern your estate](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-govern) covers insights and recommended actions. [Fabric lineage](https://learn.microsoft.com/en-us/fabric/governance/lineage) explains what the workspace view shows and when to use impact analysis. |
+| Keep metadata integrations working | [Fabric metadata scanning](https://learn.microsoft.com/en-us/fabric/governance/metadata-scanning-overview) covers extracting Fabric metadata for governance tooling. For existing Purview Data Map integrations, see [same-tenant Fabric scanning](https://learn.microsoft.com/en-us/purview/register-scan-fabric-tenant) and [supported metadata and lineage](https://learn.microsoft.com/en-us/purview/data-map-lineage-fabric). These are not replacements for scanning external sources. |
+| Verify access, protection, and audit | [OneLake access control](https://learn.microsoft.com/en-us/fabric/onelake/security/data-access-control-model) explains data-plane enforcement. [Information protection](https://learn.microsoft.com/en-us/fabric/governance/information-protection), [DLP for Fabric and Power BI](https://learn.microsoft.com/en-us/power-bi/enterprise/service-security-dlp-policies-for-power-bi-overview), and [Fabric activity auditing](https://learn.microsoft.com/en-us/fabric/admin/track-user-activities) help verify controls and evidence for the workloads in scope. |
 
 ## Lineage-aware impact analysis pattern
 
