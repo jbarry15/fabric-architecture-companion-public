@@ -1,6 +1,6 @@
 ---
-name: "Architecture Checklist"
-description: "Runs through the Fabric architecture checklist against a design description or document"
+name: architecture-checklist
+description: "Review a Microsoft Fabric architecture description or document against the repository's best practices and anti-patterns."
 ---
 
 # Architecture Checklist Skill

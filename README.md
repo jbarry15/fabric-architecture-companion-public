@@ -1,6 +1,6 @@
 # Microsoft Fabric Architecture Companion
 
-An opinionated companion for teams adopting Microsoft Fabric. Contains best practices, anti-patterns, architecture comparisons, security guidance, and Copilot-powered agents and skills to help review designs — all grounded in the latest official Microsoft documentation via the Learn MCP Server.
+An opinionated companion for teams adopting Microsoft Fabric. Contains best practices, anti-patterns, architecture comparisons, security guidance, and Copilot-powered review tools. Use the linked Microsoft Learn documentation to verify current product behavior, availability, and limits.
 
 ## Who this is for
 
@@ -17,7 +17,7 @@ An opinionated companion for teams adopting Microsoft Fabric. Contains best prac
 | Requirement | Details |
 |-------------|---------|
 | **Microsoft Fabric access** | A Fabric workspace (trial or paid). [Start a free trial](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial) |
-| **GitHub account** | To clone and use this repo. [Create one free](https://github.com/signup) |
+| **GitHub account** | For Copilot and contributing. No account is needed to browse or clone this public repo. |
 | **VS Code** (recommended) | With [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) for agent mode |
 | **GitHub Copilot access** | [Free tier](https://github.com/features/copilot/plans), Pro, Business, or Enterprise |
 
@@ -38,7 +38,7 @@ An opinionated companion for teams adopting Microsoft Fabric. Contains best prac
 git clone https://github.com/jbarry15/fabric-architecture-companion-public.git
 cd fabric-architecture-companion-public
 
-# 2. Open in VS Code (MCP server auto-configures)
+# 2. Open in VS Code and start the configured MCP server if prompted
 code .
 
 # 3. Start Copilot agent mode (Ctrl+Shift+I) and ask:
@@ -49,8 +49,9 @@ code .
 
 For Copilot CLI users:
 ```bash
-# Install the Microsoft Learn MCP plugin (one-time)
-/plugin install microsoftdocs/mcp
+# Run these commands inside GitHub Copilot CLI (one-time setup)
+/plugin marketplace add microsoftdocs/mcp
+/plugin install microsoft-docs@microsoft-docs-marketplace
 
 # Then ask questions in the repo context
 # Copilot will use the agents, skills, and MCP tools automatically
@@ -68,7 +69,7 @@ For Copilot CLI users:
 
 ### Microsoft Learn MCP Server integration
 
-The [Microsoft Learn MCP Server](https://learn.microsoft.com/en-us/training/support/mcp) is pre-configured in `.vscode/mcp.json`. When you open this repo in VS Code with Copilot agent mode, it automatically has access to:
+The [Microsoft Learn MCP Server](https://learn.microsoft.com/en-us/training/support/mcp-get-started) is configured in `.vscode/mcp.json`. Start it in VS Code and approve the trust prompt if shown. Once running, it provides:
 
 - `microsoft_docs_search` — Search across all Microsoft Learn documentation
 - `microsoft_docs_fetch` — Retrieve full articles for detailed guidance
@@ -97,10 +98,10 @@ Curated Fabric skills and agent enablement resources for operating over Microsof
 Model Context Protocol server references, best practices, and anti-patterns for connecting AI agents to Fabric and Power BI capabilities, including Core, Fabric IQ, Data Agent, Data Warehouse, Eventhouse, Activator, Ontology, Data Factory, Real-Time Intelligence, local Fabric, and Power BI MCP servers.
 
 ### 💰 Fabric Pricing & Forecasting
-Draft area for Fabric pricing, capacity planning, consumption forecasting, reservations, cost-governance guidance, best practices, and anti-patterns.
+Guidance for Fabric pricing, consumption forecasting, capacity reservations, and cost governance.
 
 ### 📏 Fabric Quota & Capacity Planning
-Draft area for Fabric quota management, CU sizing, capacity operations, regional capacity planning, best practices, and anti-patterns.
+Guidance for Fabric quota management, CU sizing, capacity operations, and regional capacity planning.
 
 ### 📊 Reference Architectures
 Side-by-side comparison matrix: Gold Standard ✅ vs. Silver/Transitional ⚖️ vs. Anti-Pattern 🚫 across 13 architecture dimensions. Also includes the **OneLake Architectural Guidance Framework** (strategic initiatives → proven patterns → foundational capabilities) and a Fabric data-store decision guide.

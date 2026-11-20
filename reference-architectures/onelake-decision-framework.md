@@ -18,7 +18,7 @@ Use it as a decision aid: start from the initiative you're pursuing, select the 
 
 ## Architecture diagram
 
-![OneLake Architectural Guidance Framework — a three-layer stack of strategic initiatives (WHY), architectural patterns (HOW), and foundational capabilities (WHAT) over a single governed OneLake foundation](images/onelake-decision-framework.png)
+![Five patterns around OneLake: data access unification, medallion architecture, governed data mesh, platform simplification, and external data sharing](images/onelake-decision-framework.png)
 
 The same three-layer flow, rendered inline:
 

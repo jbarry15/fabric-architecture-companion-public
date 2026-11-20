@@ -85,13 +85,13 @@ Use the Fabric REST APIs as the foundation for repeatable item, workspace, capac
 | **Data Science** | ML Experiments, ML Models, Data Agents |
 | **Data Factory** | Pipelines, Dataflows Gen2, Copy Jobs, Mirrored DBs |
 | **Real-Time Intelligence** | Eventhouse, EventStream, KQL Database, KQL Queryset, Real-time Dashboard, Activator |
-| **Data Warehouse** | Warehouse (preview), Mirrored Databricks Catalog |
+| **Data Warehouse** | Warehouse, Mirrored Azure Databricks Catalog |
 | **Power BI** | Semantic Models, Reports (PBIR), Paginated Reports, Org Apps, Metrics Sets |
 | **Database** | SQL Database, Cosmos Database (preview) |
 
 > Unsupported items in a connected workspace are ignored (not deleted) — they just can't be committed or synced.
 >
-> CI/CD item support changes quickly and some items remain in preview. Validate the current supported-item matrix before standardizing a workload-specific release process.
+> [Git integration support](https://learn.microsoft.com/en-us/fabric/cicd/git-integration/intro-to-git-integration#supported-items) varies by item. Warehouse Git integration versions schema definitions, not table data, and [does not support versioning SQL analytics endpoints](https://learn.microsoft.com/en-us/fabric/data-warehouse/git-integration). Check deployment-pipeline support separately.
 
 ## Best practices
 

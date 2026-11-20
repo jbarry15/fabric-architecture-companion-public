@@ -9,6 +9,7 @@ The **Database** workload brings **operational (OLTP) databases** natively into 
 | Store | Type | Engine | Best for |
 |-------|------|--------|----------|
 | **[SQL database in Fabric](https://learn.microsoft.com/en-us/fabric/database/sql/overview)** | Relational OLTP | Same engine as Azure SQL Database | The home in Fabric for transactional apps and operational data |
+| **[Fabric HorizonDB (preview)](https://learn.microsoft.com/en-us/fabric/database/horizondb/overview)** | Relational OLTP | PostgreSQL | Evaluate PostgreSQL-compatible applications and OneLake integration; only the database creator can connect during preview |
 | **[Cosmos DB in Fabric](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/overview)** | NoSQL | Same engine as Azure Cosmos DB for NoSQL | AI apps, semi-structured/evolving data, vector & hybrid search |
 
 **The key architectural value: operational data lands in OneLake automatically.** Both Fabric-native databases **auto-replicate to OneLake in open Delta/Parquet format in near real time** — no ETL and no separate copy pipeline. For external operational databases, use Fabric [Mirroring](mirroring.md) where supported, and reserve Data Factory ingestion for sources that can't replicate or mirror cleanly.
@@ -67,7 +68,7 @@ All Fabric stores expose data in OneLake in open format by default — choose by
 
 ### Platform update: Database Hub and agentic database operations
 
-Database Hub (preview) adds a Fabric portal control plane for discovering and observing database resources across SQL Server, Azure SQL, SQL database in Fabric, PostgreSQL, and Cosmos DB. Use it as an estate view and triage surface, not as a replacement for source-system ownership.
+Database Hub is generally available for discovering and monitoring supported resources across Azure, Fabric, on-premises, and supported multicloud environments. Database Agents remains in preview. Database Hub does not currently support Cosmos DB in Fabric, mirrored databases in Fabric, or Fabric Data Warehouse. Use it for estate visibility and triage, not as a replacement for source-system ownership.
 
 Agentic database skills, Database Hub agent skills, SSMS Agent Mode, and Data API Builder MCP/vector/JSON improvements are useful accelerators for database engineering. Keep the same guardrails used elsewhere in Fabric: least privilege, explicit approval for generated DDL/DML, source-controlled schema changes, and validation against the target database.
 

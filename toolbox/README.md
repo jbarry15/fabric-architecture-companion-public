@@ -57,7 +57,7 @@ Curated links to tools, accelerators, and scripts from the [Microsoft Fabric Too
 | **Semantic Link Labs** | Python library for advanced semantic model and lakehouse analysis in Fabric notebooks | [GitHub](https://github.com/microsoft/semantic-link-labs) · [PyPI](https://pypi.org/project/semantic-link-labs/) |
 | **Best Practice Analyzer (BPA)** | Evaluates semantic models against best practices (performance, DAX, formatting, errors) | [Notebook](https://github.com/microsoft/semantic-link-labs/blob/main/notebooks/Best%20Practice%20Analyzer%20Report.ipynb) |
 | **Delta Analyzer** | Analyzes Delta tables in lakehouses (row counts, data types, null counts, file stats) | [Notebook](https://github.com/microsoft/semantic-link-labs/blob/main/notebooks/Delta%20Analyzer.ipynb) |
-| **Power BI Modeling MCP Server** | Local MCP server for AI-assisted semantic model authoring, DAX validation, TMDL/PBIP workflows, bulk refactoring, translations, and model documentation | [GitHub](https://github.com/microsoft/powerbi-modeling-mcp) · [Local card](../fabric-mcps/repos/powerbi-modeling-mcp.md) |
+| **Power BI Authoring MCP Server (local)** | Local MCP server for semantic model authoring, DAX validation, TMDL/PBIP workflows, bulk refactoring, translations, and model documentation | [GitHub](https://github.com/microsoft/powerbi-modeling-mcp) · [Local card](../fabric-mcps/repos/powerbi-modeling-mcp.md) |
 | **Semantic Model Audit** | Audit and analyze semantic model configuration | [GitHub](https://github.com/microsoft/fabric-toolbox/tree/main/tools/SemanticModelAudit) |
 | **DAX Performance Testing** | Benchmark DAX query performance | [GitHub](https://github.com/microsoft/fabric-toolbox/tree/main/tools/DAXPerformanceTesting) |
 

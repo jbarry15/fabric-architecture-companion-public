@@ -27,7 +27,7 @@ Use clear definitions in every planning artifact:
 
 | Concept | Use in planning |
 |---------|-----------------|
-| Quota | Determines how many Fabric CUs can be provisioned in a subscription and region. |
+| Quota | Sets the subscription and regional CU limit for provisioned capacity and configured overage thresholds. |
 | Capacity | The Fabric compute resource that runs workloads and incurs capacity charges. |
 | Pricing | The regional cost model for the selected SKU, billing option, and covered charges. |
 | Reservation | A one-year or three-year commitment that can discount matching Fabric capacity usage. |

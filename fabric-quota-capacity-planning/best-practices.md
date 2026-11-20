@@ -23,7 +23,7 @@ Use the Fabric Capacity Estimator as an early sizing input, but validate the rec
 
 ### 2. Check quota before recommending capacity
 
-Quota determines the maximum CUs available for provisioned Fabric capacities in a subscription and region. You aren't charged for quota itself, but you can't provision capacity beyond the available quota.
+[Fabric CU quota](https://learn.microsoft.com/en-us/fabric/enterprise/fabric-quotas) applies per Azure subscription and region. It must cover provisioned capacity and configured overage thresholds, even when no overage occurs. Quota itself is not a charge.
 
 Before recommending a new capacity, SKU increase, reservation, or regional deployment:
 
@@ -31,7 +31,7 @@ Before recommending a new capacity, SKU increase, reservation, or regional deplo
 - Register the `Microsoft.Fabric` resource provider if needed.
 - Check current usage and quota limit.
 - Calculate available quota as `limit - currentValue`.
-- Request quota increases early enough to avoid blocking deployment.
+- Allow for planned SKU increases and overage thresholds when requesting quota increases.
 
 ### 3. Size from 30-second CU demand
 
@@ -133,7 +133,7 @@ Do not treat surge protection as a replacement for correct sizing, optimization,
 
 Quota planning, SKU sizing, pricing, and reservations are linked but different:
 
-- Quota is the maximum CUs you can provision.
+- Quota is the regional subscription CU limit for provisioned capacity and configured overage thresholds.
 - Capacity is the Fabric compute you run and pay for.
 - Reservation is a commitment that can discount matching capacity usage.
 - Pricing depends on SKU, region, billing model, usage, and covered charges.

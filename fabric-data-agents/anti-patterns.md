@@ -183,8 +183,8 @@ Common mistakes when building Fabric Data Agents that consume Fabric data.
 - Ignoring the published data agent MCP endpoint
 
 ### Why it's a problem
-- Microsoft Learn states the Python client sample uses the OpenAI Assistants API path and should be migrated to the MCP endpoint
-- The old Assistants API path has a stated August 26, 2026 shutdown date and is no longer a durable runtime integration target
+- The legacy Python sample calls the [OpenAI Assistants API, retired on August 26, 2026](https://learn.microsoft.com/en-us/fabric/data-science/consume-data-agent-python)
+- Move programmatic runtime queries to the published data agent's MCP endpoint
 - Query/runtime code can become obsolete even if management-plane SDK code remains valid
 
 ### What to do instead

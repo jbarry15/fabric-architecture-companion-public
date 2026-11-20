@@ -23,8 +23,8 @@ Use the Microsoft repository to find current packages, templates, documentation,
 
 ## Prerequisites and watch-outs
 
-- **Fabric Apps is preview.** Confirm tenant enablement, workspace capacity, supported region, and creation/deployment permissions before setup.
-- The standard `npx rayfin dev` workflow runs the frontend locally with a backend in Fabric and can create cloud resources. The repository labels its fully local development option experimental; do not assume every local session is offline or cost-free.
+- **Fabric Apps and Rayfin are generally available.** Confirm tenant enablement, workspace capacity, supported region, and creation/deployment permissions before deploying to Fabric.
+- By default, `npx rayfin dev` can provision or reuse a Fabric backend. [Rayfin Local](https://github.com/microsoft/rayfin-local) runs the app and backend locally without provisioning a Fabric workspace. Connectors that access Fabric still require connectivity and credentials.
 - Template layouts and CLI options change. Follow the selected template and current documentation rather than mixing snippets from different versions.
 - Fabric sign-in does not replace application authorization. Review data policies, item permissions, and frontend assets; never embed secrets in browser-delivered code.
 
@@ -41,6 +41,6 @@ Use the Microsoft repository to find current packages, templates, documentation,
 
 ## Microsoft Learn
 
-- [Fabric Apps overview and preview prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
+- [Fabric Apps overview and prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
 - [Create and deploy a Fabric app with the CLI](https://learn.microsoft.com/en-us/fabric/apps/create-app-with-cli)
 - [Rayfin SDK overview](https://learn.microsoft.com/en-us/javascript/api/fabric-apps-sdk-javascript/rayfin-overview)

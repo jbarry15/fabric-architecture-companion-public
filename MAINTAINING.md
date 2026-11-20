@@ -5,8 +5,9 @@ Microsoft Fabric evolves rapidly. This document explains how to maintain the con
 ## Quick update workflow
 
 ```bash
-# 1. Pull latest changes
-git pull origin main
+# 1. Start a documentation branch from the latest main
+git fetch origin
+git switch -c docs/fabric-refresh origin/main
 
 # 2. Open in VS Code with Copilot agent mode (Ctrl+Shift+I)
 #    Ask: "Check if any best practices or anti-patterns are outdated
@@ -14,9 +15,10 @@ git pull origin main
 
 # 3. Copilot will search live docs and flag discrepancies
 
-# 4. Make updates, commit, and push
-git add -A && git commit -m "Update [section] based on latest Fabric docs"
-git push
+# 4. Review the diff, stage the intended files, and commit
+git diff --check
+# After staging and committing, push the branch and open a PR into main
+git push -u origin HEAD
 ```
 
 ## What to check and when

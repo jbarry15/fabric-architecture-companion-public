@@ -19,7 +19,6 @@ This guidance explicitly covers the Microsoft Learn Fabric MCP server options:
 - **Fabric MCP Server (local)** - local development workflows, API docs/specs, OneLake operations, and extensibility.
 - **DataFactory MCP Server** - local pipeline and Apache Airflow job management.
 - **Real-Time Intelligence MCP Server (local)** - local RTI and Azure Data Explorer workflows.
-- **Power BI Modeling MCP Server** - semantic modeling workflows over Power BI/Fabric semantic models.
 
 ## 1. Choose the MCP server by job-to-be-done
 
@@ -39,7 +38,7 @@ This guidance explicitly covers the Microsoft Learn Fabric MCP server options:
 | Development workflows, API docs/specs, OneLake file operations, local file integration, or offline best-practice help | Fabric MCP Server (local) | Local subprocess with development tooling and open-source extensibility |
 | Data Factory pipelines, schedules, run monitoring, or Apache Airflow job lifecycle | DataFactory MCP Server | Local .NET tool for Fabric Data Factory authoring and operations from VS Code |
 | Local Real-Time Intelligence, Eventhouse, Eventstream, Activator, map, or ADX workflows | Real-Time Intelligence MCP Server (local) | Local open-source server for broader RTI development workflows |
-| Power BI semantic model authoring, DAX validation, TMDL/PBIP workflows, translations, or bulk model refactoring | Power BI Modeling MCP Server | Purpose-built semantic modeling tool surface |
+| Power BI Desktop modeling, local TMDL/PBIP workflows, or transactions | Power BI Authoring MCP Server (local) | Supports Desktop and source files that the hosted endpoint cannot reach |
 
 Use more than one MCP server when the workflow needs both remote Fabric operations and local development tooling. Keep the boundaries explicit so the agent doesn't use a broader tool surface than the task requires.
 

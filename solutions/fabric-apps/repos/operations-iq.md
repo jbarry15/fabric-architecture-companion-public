@@ -21,7 +21,7 @@ Use the upstream application and administrator guides for setup. Keep analytical
 
 ## Prerequisites and watch-outs
 
-- **Fabric Apps is preview.** Confirm tenant enablement, capacity, and current support for the components selected for deployment.
+- **Fabric Apps is generally available.** Confirm tenant enablement, capacity, and the support status of the other components selected for deployment.
 - Deployment spans Fabric and Azure/Entra configuration. Review permissions, identity paths, connection settings, resource costs, and cleanup before running the orchestrator.
 - AI explanations, statistical associations, and forecasts do not prove causation or safe operating limits. Validate conclusions with domain experts.
 - Activator rules can notify or trigger actions. Test them without consequential downstream effects before enabling operational use.
@@ -40,4 +40,4 @@ Use the upstream application and administrator guides for setup. Keep analytical
 
 ## Microsoft Learn
 
-- [Fabric Apps overview and preview prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
+- [Fabric Apps overview and prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)

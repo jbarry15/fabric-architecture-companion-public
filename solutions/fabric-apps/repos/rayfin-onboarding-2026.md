@@ -24,7 +24,7 @@ Use the public lab as a learning path, with Microsoft Learn as the authority for
 
 ## Prerequisites and watch-outs
 
-- **Fabric Apps is preview.** A completed workshop is not production certification, regardless of the lab's deployment terminology.
+- **Fabric Apps is generally available.** A completed workshop does not establish production readiness; verify the app's security, reliability, and operational requirements separately.
 - Some upstream setup directions are event-specific. Use the standard public Fabric setup documentation for your tenant rather than assuming the lab's environment or workspace settings apply.
 - Do not assume a trial-workspace setup meets the data-agent extension's requirements. Microsoft Learn specifies paid F2 or higher, or eligible Power BI Premium P1 or higher with Fabric enabled, plus the required AI tenant settings and source read access.
 - Local frontend development can use a Fabric-hosted backend and incur cloud costs. Review deployment targets, capacity, Copilot access, and cleanup before starting.
@@ -44,6 +44,6 @@ Use the public lab as a learning path, with Microsoft Learn as the authority for
 
 ## Microsoft Learn
 
-- [Fabric Apps overview and preview prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
+- [Fabric Apps overview and prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
 - [Create and deploy a Fabric app with the CLI](https://learn.microsoft.com/en-us/fabric/apps/create-app-with-cli)
 - [Fabric data agent creation and prerequisites](https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent)

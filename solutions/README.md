@@ -51,9 +51,9 @@ The catalog contains 20 entries: two scenario and decision guides and 18 reposit
 | [Power BI Ops Agent](power-bi/repos/pbi-ops-agent.md) | Power BI | Demo | Proof of concept; diagnostic recommendations are not automatic remediation |
 | [IQ supply-chain demo](fabric-ai-iq-ontology/repos/supply-chain-demo.md) | Fabric AI, IQ, and Ontology | Demo | Synthetic-data accelerator with preview dependencies; intended for evaluation |
 | [Fabric IQ and Copilot finance demo](fabric-ai-iq-ontology/repos/fabric-iq-copilot-demo.md) | Fabric AI, IQ, and Ontology | Demo | Public demo materials are not a complete setup guide |
-| [Microsoft Rayfin](fabric-apps/repos/microsoft-rayfin.md) | Fabric Apps | Guide | Fabric Apps is preview; local frontend development can deploy a Fabric backend |
+| [Microsoft Rayfin](fabric-apps/repos/microsoft-rayfin.md) | Fabric Apps | Guide | Choose Rayfin Local or a Fabric-backed dev session explicitly |
 | [Rayfin Onboarding 2026](fabric-apps/repos/rayfin-onboarding-2026.md) | Fabric Apps | Workshop | Use public Fabric setup guidance and verify the separate data-agent prerequisites |
-| [Operations IQ](fabric-apps/repos/operations-iq.md) | Fabric Apps | Reference implementation | Fabric Apps preview; validate multi-service permissions and action approval |
+| [Operations IQ](fabric-apps/repos/operations-iq.md) | Fabric Apps | Reference implementation | Validate permissions across services and approval for actions |
 
 ## How to use a solution
 

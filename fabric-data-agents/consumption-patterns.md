@@ -14,7 +14,7 @@ Treat a published Fabric data agent as a reusable governed analytical tool. Keep
 | **Microsoft Foundry via Fabric IQ / OneLake Catalog** | Let a Foundry agent discover and call one or more published Fabric data agents from the OneLake Catalog. | Preview capability. The data agent must be published, same-tenant access must work, and users need permissions to the data agent and underlying sources. |
 | **Earlier Microsoft Foundry Fabric tool** | Migrate existing integrations to the Fabric IQ / OneLake Catalog tool. | The earlier integration is unsupported as of November 6, 2026; see the [retirement notice](https://learn.microsoft.com/en-us/fabric/data-science/data-agent-foundry). |
 | **MCP endpoint** | Use the published agent's MCP endpoint for custom MCP clients, VS Code, or agent frameworks that support MCP over streamable HTTP. | The endpoint is not a generic REST API. Clients must use the MCP flow and attach a valid Fabric bearer token. |
-| **Python / external applications** | Use custom apps when you need a bespoke user experience or integration point. For new runtime query paths, use MCP. | The Python client SDK sample depends on the OpenAI Assistants API path, which Microsoft Learn flags for migration to MCP. |
+| **Python / external applications** | Use the published data agent's MCP endpoint for runtime queries from custom apps. | The legacy Python sample uses the retired OpenAI Assistants API; don't use it as a working integration example. |
 | **Native Fabric visual responses** | Let users ask for charts directly in the Fabric data agent experience. | Rendered visuals are currently available in the Fabric data agent experience, not in external clients such as SDK, Teams, Microsoft 365 Copilot, or Foundry. |
 
 ## Best practices

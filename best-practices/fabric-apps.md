@@ -2,7 +2,7 @@
 
 Based on [What is Fabric Apps?](https://learn.microsoft.com/en-us/fabric/apps/overview)
 
-> **Preview:** Fabric Apps is in [preview](https://learn.microsoft.com/en-us/fabric/fundamentals/preview) and is [not yet available in all regions](https://learn.microsoft.com/en-us/fabric/admin/region-availability). Use it for prototypes, pilots, and internal scenarios where preview support boundaries are acceptable; don't rely on it for SLA-backed production workloads until the capability reaches GA.
+> **Generally available:** Fabric Apps and Rayfin reached general availability in November 2026. Verify [region availability](https://learn.microsoft.com/en-us/fabric/admin/region-availability), tenant settings, capacity, and support for the specific services your app uses before deploying to production.
 
 ## Overview
 
@@ -18,7 +18,7 @@ A Fabric app runs as a **managed service** — Fabric handles hosting, networkin
 |---------------|----------|-------|
 | **SQL database in Fabric** | Managed relational store; schema applied from your TypeScript decorators | **Read-only in the portal** — schema changes must come from code |
 | **Authentication** | Fabric-brokered **Microsoft Entra ID SSO** | Fabric SSO exclusively; no other providers after deployment |
-| **Static Content** | Built frontend (HTML/CSS/JS) served from OneLake storage at a public URL | Updated on each deploy |
+| **Static Content** | Hosted frontend (HTML/CSS/JS) | Choose protected or anonymous access for static files; this is separate from backend data authorization |
 
 A single backend endpoint exposes `/api/graphql` (data API), `/auth` (authentication), and `/storage` (files).
 
@@ -62,7 +62,7 @@ Consider other options when you need:
 - ✅ **Right-size capacity** — Fabric Apps consume capacity units from the assigned capacity; monitor and plan capacity like any other workload.
 
 ### Lifecycle
-- ✅ **Know where development runs** — the standard `npx rayfin dev` workflow runs the frontend locally with a backend in Fabric and can create cloud resources. The upstream Rayfin repository labels its fully local development option experimental.
+- ✅ **Choose where the backend runs** — the default `npx rayfin dev` workflow can provision or reuse a Fabric backend while running the frontend locally. Use [Rayfin Local](https://github.com/microsoft/rayfin-local) to run both locally without provisioning a Fabric workspace. Test connectors, identity, and permissions in Fabric before production; connectors that access Fabric still require connectivity and credentials.
 - ✅ **Manage the tenant prerequisite** — a tenant admin must enable the Fabric Apps workload, and the workspace must have Fabric capacity assigned.
 - ✅ **Integrate with source control and pipelines** — keep the project in Git and align deployments with your [CI/CD practices](ci-cd-deployment.md).
 
@@ -77,7 +77,7 @@ Consider other options when you need:
 ## Related solutions
 
 - [Microsoft Rayfin](../solutions/fabric-apps/repos/microsoft-rayfin.md) - public SDK, CLI, and template entry points
-- [Rayfin Onboarding 2026](../solutions/fabric-apps/repos/rayfin-onboarding-2026.md) - a public work-order app lab with preview and setup caveats
+- [Rayfin Onboarding 2026](../solutions/fabric-apps/repos/rayfin-onboarding-2026.md) - a public work-order app lab with setup caveats
 
 ## References
 
@@ -89,4 +89,3 @@ Consider other options when you need:
 - [Fabric Apps region availability](https://learn.microsoft.com/en-us/fabric/admin/region-availability)
 - [Workspace roles](https://learn.microsoft.com/en-us/fabric/fundamentals/roles-workspaces)
 - [SQL database in Fabric overview](https://learn.microsoft.com/en-us/fabric/database/sql/overview)
-- [Fabric preview information](https://learn.microsoft.com/en-us/fabric/fundamentals/preview)

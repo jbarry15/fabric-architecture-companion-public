@@ -21,7 +21,7 @@ Follow the upstream installation and coverage documentation. Reconcile findings 
 
 ## Prerequisites and watch-outs
 
-- The application uses Fabric Apps, which is preview. Confirm tenant enablement, capacity, deployment permissions, and the selected collector's API requirements.
+- The application uses Fabric Apps, which is generally available. Confirm tenant enablement, capacity, deployment permissions, and the selected collector's API requirements.
 - **Shared metadata is not automatically filtered to each viewer's source permissions.** Upstream documents that Atlas Scout users can see all synchronized workspaces and that the connection inventory is shared with Atlas users. Restrict the app audience and collection scope accordingly.
 - Missing or partial metadata is not evidence that access is denied or a control is effective. Snapshot age and API coverage matter.
 - Optional Scout and MCP integrations have separate setup and identity requirements. Review them before enabling access to governance metadata.
@@ -40,4 +40,4 @@ Follow the upstream installation and coverage documentation. Reconcile findings 
 ## Microsoft Learn
 
 - [Lineage in Fabric](https://learn.microsoft.com/en-us/fabric/governance/lineage)
-- [Fabric Apps overview and preview prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)
+- [Fabric Apps overview and prerequisites](https://learn.microsoft.com/en-us/fabric/apps/overview)

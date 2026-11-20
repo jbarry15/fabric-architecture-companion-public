@@ -1,12 +1,12 @@
-# Power BI Modeling MCP Server - agent-assisted semantic modeling
+# Power BI Authoring MCP Server (local)
 
 Source repo: [microsoft/powerbi-modeling-mcp](https://github.com/microsoft/powerbi-modeling-mcp)
 
-Demo video: [Power BI Modeling MCP demo](https://aka.ms/power-modeling-mcp-demo)
+Demo video: [Power BI semantic modeling demo](https://aka.ms/power-modeling-mcp-demo)
 
 ## What it is
 
-A Microsoft Public Preview MCP server that runs locally and connects AI agents to Power BI semantic models in Power BI Desktop, Fabric workspaces, or Power BI Project (PBIP/TMDL) files.
+The [local Power BI Authoring MCP server](https://learn.microsoft.com/en-us/power-bi/developer/mcp/power-bi-authoring-mcp) is generally available. It connects AI agents to Power BI semantic models in Power BI Desktop, Fabric workspaces, or Power BI Project (PBIP/TMDL) files. The GitHub repository retains the `powerbi-modeling-mcp` name. The hosted option is a separate deployment of the same authoring server and is in preview.
 
 Use it when an architecture or delivery scenario needs AI-assisted semantic modeling, DAX query validation, TMDL/PBIP workflows, model documentation, translations, bulk refactoring, or governed semantic model operations.
 
@@ -22,6 +22,6 @@ Use it when an architecture or delivery scenario needs AI-assisted semantic mode
 
 ## How to use it with this guide
 
-Use this as a visible pointer to the Microsoft Power BI Modeling MCP Server repo and demo. Keep the source repo as the canonical implementation reference unless this guide needs a reviewed point-in-time prompt, setup pattern, or delivery runbook.
+Use the [hosted-versus-local comparison](../docs/power-bi-authoring-mcp-server.md) to choose a deployment. The local server does not support macOS; on a Mac, use the hosted option for Fabric workspace models.
 
-Validate Public Preview status, MCP client support, XMLA endpoint requirements, semantic model permissions, authentication mode, write-operation confirmations, model backups, and customer data handling before using it in a delivery plan.
+Verify MCP client support, XMLA requirements for workspace models, semantic model permissions, authentication mode, write-operation confirmations, model backups, and data handling before use.
