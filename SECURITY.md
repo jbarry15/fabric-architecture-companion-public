@@ -1,19 +1,16 @@
-<!-- BEGIN MICROSOFT SECURITY.MD V1.0.0 BLOCK -->
+# Security
 
-<!-- markdownlint-disable-next-line first-line-h1 -->
-## Security
+This repository provides Microsoft Fabric architecture guidance. It is not an official Microsoft support channel.
 
-Microsoft takes the security of our software products and services seriously, which includes all source code repositories in our GitHub organizations.
+## Reporting a vulnerability
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+Do not report vulnerabilities in public issues or discussions. If **Report a vulnerability** is available on the repository's [Security tab](https://github.com/jbarry15/fabric-architecture-companion-public/security), use it to submit a private report. Otherwise, contact the repository maintainer through an existing private channel. If you have no private contact, do not post the details publicly.
 
-For security reporting information, locations, contact information, and policies, please review the latest guidance for Microsoft repositories at [https://aka.ms/SECURITY.md](https://aka.ms/SECURITY.md).
-
-<!-- END MICROSOFT SECURITY.MD BLOCK -->
+Include the affected file or component and the potential impact. Do not include secrets, credentials, or customer data.
 
 ## Sensitive information
 
-If the issue is not a vulnerability but involves accidentally exposed confidential information, secrets, customer data, or internal-only content, contact the repository maintainers privately and avoid repeating the sensitive details in public issues.
+If you find accidentally exposed confidential information or other non-public material, follow the private reporting guidance above. Do not repeat the sensitive details in public.
 
 Do not submit or disclose:
 
